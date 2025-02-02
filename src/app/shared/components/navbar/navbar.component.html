@@ -1,0 +1,60 @@
+<div class="pos-f-t">
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-custom p-4">
+        <h4 class="text-white">Collapsed content</h4>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
+    <!-- Este es boton que deseo que abra el sidebars y no consigo-->
+    <nav class="navbar navbar-dark bg-custom">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Aquí se coloca el texto centrado -->
+    <div class="navbar-text-center">
+      <img src="../assets/logo.png" width="50" height="50"> 
+      </div>
+
+    <!-- Aqui configuro el boton de la cesta que ira al otro lado-->
+
+    <div class="navbar-button-left">
+        <button class="navbar-button-left-enter" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <!-- Para poner un icono-->
+            <span class="navbar-toggler-icon">🛒</span>
+        </button>
+    </div>
+
+    </nav>
+  </div>
+    <img src="https://eympro.com/wp-content/uploads/2021/03/creacion-de-mi-pagina-web-1640x978-1.jpg" alt="Descripción de la imagen">
+
+
+  
+  <style>
+    /* Personalización del navbar */
+    .bg-custom {
+      background-color: #a6b36b; /* Ajusta este color al tono verde oscuro que prefieras */
+    }
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.5); /* Ajusta si quieres más contraste */
+    }
+    .navbar-toggler-icon {
+    /*  background-color: white; /* Cambia el color del ícono de hamburguesa */
+    }
+
+    /* Contenedor para el texto centrado */
+  .navbar-text-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Estilo del texto centrado */
+  .navbar-text {
+    color: white; /* Ajusta el color del texto */
+    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  }
+
+  </style>
+  

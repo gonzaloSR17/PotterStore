@@ -3,14 +3,18 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SharedModule } from './shared/shared.module';
+import { PagesWikiComponent } from './pages/pages-wiki/pages-wiki.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PagesWikiComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [
     provideClientHydration(withEventReplay())
