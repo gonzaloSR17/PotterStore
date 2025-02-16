@@ -120,6 +120,13 @@
 </p>
 
 
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>Componente que muestra una lista de películas de Harry Potter.</p>
+
+    </p>
 
 
 
@@ -226,12 +233,14 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:16</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:22</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
+                            <div class="io-description"><p>Constructor del componente que inyecta el servicio de Harry Potter.</p>
+</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -240,6 +249,7 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
+                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -254,6 +264,10 @@
                                                             No
                                                     </td>
                                                     
+                                                        <td>
+                                                                <p>Servicio que obtiene las películas de Harry Potter.</p>
+
+                                                        </td>
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -287,9 +301,15 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:16</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:22</a></div>
                             </td>
                         </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Array que almacena las películas obtenidas del servicio.</p>
+</div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -321,14 +341,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="29"
-                                    class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:29</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="41"
+                                    class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:41</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Obtiene la lista de películas desde el servicio y la almacena en resMovies.</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -358,14 +380,16 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="23"
-                                    class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:23</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="34"
+                                    class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:34</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                        <div class="io-description"><p>Método que se ejecuta al inicializar el componente.</p>
+</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -385,43 +409,50 @@
 import { movie } from &#x27;../../interfaces/harrypotter/movies.interface&#x27;;
 import { HarryPotterServices } from &#x27;../../services/harrypotterServices/harrypotter.services&#x27;;
 
+/**
+ * Componente que muestra una lista de películas de Harry Potter.
+ * 
+ * @author Gonzalo Sanchez-Ros Paz
+ */
 @Component({
   selector: &#x27;app-card-list-movies&#x27;,
   standalone: false,
-  
   templateUrl: &#x27;./card-list-movies.component.html&#x27;,
   styleUrl: &#x27;./card-list-movies.component.css&#x27;
 })
 export class CardListMoviesComponent {
 
-  // Creacion del array
+  /**
+   * Array que almacena las películas obtenidas del servicio.
+   */
   @Input()
   public resMovies: movie[] &#x3D; [];
 
-  // constructor de servicios
-    constructor (private hpServices: HarryPotterServices){}
-  
+  /**
+   * Constructor del componente que inyecta el servicio de Harry Potter.
+   * 
+   * @param hpServices Servicio que obtiene las películas de Harry Potter.
+   */
+  constructor(private hpServices: HarryPotterServices) {}
 
-  // Inicia al iniciar dicho componente
-  ngOnInit(): void{
-
+  /**
+   * Método que se ejecuta al inicializar el componente.
+   */
+  ngOnInit(): void {
     this.imprimirPeliculasHp();
-
   }
 
-  imprimirPeliculasHp(): void{
-
-  this.hpServices.fetchMovies().subscribe(
-    (movie) &#x3D;&gt; {
-        this.resMovies &#x3D; movie
-        console.log(&#x27;Resultados encontrado:&#x27;, this.resMovies);
-    }
-  );
-
+  /**
+   * Obtiene la lista de películas desde el servicio y la almacena en resMovies.
+   */
+  imprimirPeliculasHp(): void {
+    this.hpServices.fetchMovies().subscribe(
+      (movie) &#x3D;&gt; {
+        this.resMovies &#x3D; movie;
+        console.log(&#x27;Resultados encontrados:&#x27;, this.resMovies);
+      }
+    );
   }
-
-
-
 }
 </code></pre>
     </div>
