@@ -1,20 +1,53 @@
-export const apiUrl = {
+export interface Spells {
+    data:  Datum[];
+    meta:  Meta;
+    links: SpellsLinks;
+}
 
-// Api de harry potter para los personajes mas famosos´
-// apiHarryPotter en español
+export interface Datum {
+    id:         string;
+    type:       Type;
+    attributes: Attributes;
+    links:      DatumLinks;
+}
 
-apiHarryPotter: "https://harry-potter-api.onrender.com/",
-apiCharacter: "/personajes",
-apiHechizos: "/hechizos",
-apiBooks: "/libros",
+export interface Attributes {
+    slug:        string;
+    category:    string;
+    creator:     null | string;
+    effect:      string;
+    hand:        null | string;
+    image:       null | string;
+    incantation: null | string;
+    light:       null | string;
+    name:        string;
+    wiki:        string;
+}
 
-// Api de harry potter (Solo hay en ingles)
+export interface DatumLinks {
+    self: string;
+}
 
-apiMovies:  "https://api.potterdb.com/v1/movies",
-apiLugares: "...",
+export enum Type {
+    Spell = "spell",
+}
 
-// Api de youtube
+export interface SpellsLinks {
+    self:    string;
+    current: string;
+    next:    string;
+    last:    string;
+}
 
-apiYoutube: "...",
-keyYoutube: "..."
+export interface Meta {
+    pagination:   Pagination;
+    copyright:    string;
+    generated_at: Date;
+}
+
+export interface Pagination {
+    current: number;
+    next:    number;
+    last:    number;
+    records: number;
 }

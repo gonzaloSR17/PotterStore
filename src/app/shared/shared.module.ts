@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from "./components/navbar/navbar.component";
 import { SidebarCarritoComponent } from './components/sidebars/sidebar-carrito/sidebar-carrito.component';
 import { SidebarMenuComponent } from './components/sidebars/sidebar-menu/sidebar-menu.component';
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import { SidebarMenuComponent } from './components/sidebars/sidebar-menu/sidebar
     ],
     imports: [
       CommonModule,
-      FormsModule
+      FormsModule,
+      RouterModule
     ],
     exports: [
       // Exporta el componente

@@ -1,1 +1,136 @@
-<p>pages-wiki works!</p>
+<div class="wikiPortada">
+    <img class="portada" src="../assets/portadaWiki.png">
+    <p></p>
+</div>
+
+<div class="wikiPortada">
+    <button [routerLink]="['/wiki/book']" class="botonPersonaje" type="submit" (click)="mostrarTextoLibros()">
+        <img src="../assets/HP_Libros_Portal.webp">
+    </button>
+
+    <button [routerLink]="['/wiki/movies']" type="submit" (click)="mostrarTextoPeliculas()">
+        <img src="../assets/HP_Peliculas_Portal.webp">
+    </button>
+
+    <button type="submit" (click)="mostrarTextoPersonajes()">
+        <img src="../assets/HP_Personajes_Portal.webp">
+    </button>
+</div>
+
+<div class="wikiPortada">
+    <button [routerLink]="['/wiki/spells']" type="submit" (click)="mostrarTextoHechizos()">
+        <img src="../assets/HP_Hechizos_Portal.webp">
+    </button>
+
+    <button [routerLink]="['/wiki/potions']" class="btn_pociones" type="submit" (click)="mostrarTextoLugares()">
+        <img src="../assets/HP_Pociones_Button.png">
+    </button>
+
+</div>
+
+<div class="wikiPortada">
+    <p class="letra1">{{ texto }}</p>
+</div>
+
+<div class="wikiPortada">
+    <input #nombreBusquedaPersonaje type="text" class="cajaBusqueda" placeholder="Buscar...">
+    <p></p>
+    <button class="lupa" (click)="busquedaPersonaje(nombreBusquedaPersonaje.value)">🔍</button>
+</div>
+<!-- 
+
+<div class="wikiPortada">
+    <app-card-list></app-card-list>
+</div>
+
+-->
+
+
+<style>
+/* Estilos generales */
+.wikiPortada {
+  margin: 12px; /* Espacio en blanco en los 4 lados */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; /* Esto permite que los botones se envuelvan cuando no haya espacio suficiente */
+}
+
+.portada {
+  margin-top: 60px;
+  max-width: 65%;
+  height: auto;
+  object-fit: cover;
+}
+
+input {
+  border-radius: 20px; /* Esto redondea los bordes */
+  padding: 10px;
+  border: 1px solid #ffa600; /* Un borde sutil */
+}
+
+.lupa {
+  margin-left: 2px; /* Agrega espacio al lado derecho */
+  border-radius: 20px; /* Esto redondea los bordes */
+  padding: 10px;
+  border: 1px solid #ffa600; /* Un borde sutil */
+}
+
+/* Estilo de animación para el texto */
+.letra1 {
+  font-size: 6vw;
+  opacity: 0; /* Comienza invisible */
+  animation: mostrarTexto 3s ease-in-out forwards; /* Animación del texto */
+}
+
+.btn_pociones{
+  
+}
+
+@keyframes mostrarTexto {
+  0% {
+    opacity: 0; /* Al principio, el texto está invisible */
+  }
+  50% {
+    opacity: 0.5; /* La letra se va haciendo visible */
+  }
+  100% {
+    opacity: 1; /* Al final, el texto es completamente visible */
+  }
+}
+
+/* Estilo para los botones */
+.botonPersonaje,
+button {
+  border: none; /* Elimina el borde predeterminado del botón */
+  background-color: transparent; /* Fondo transparente */
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Cambia el cursor a un puntero cuando pasas el ratón por encima */
+  opacity: 0; /* Comienza invisible */
+  animation: mostrarBotones 1s ease-in-out forwards; /* Animación para mostrar los botones */
+}
+
+.botonPersonaje:hover,
+button:hover {
+  transform: translateY(-5px) scale(1.1); /* Aumenta el tamaño y mueve el botón hacia arriba */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Añade una sombra suave */
+}
+
+.botonPersonaje img,
+button img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Hace que la imagen ocupe todo el espacio del botón */
+}
+
+/* Animación para los botones */
+@keyframes mostrarBotones {
+  0% {
+    opacity: 0; /* Comienza invisible */
+  }
+  100% {
+    opacity: 1; /* Los botones se hacen completamente visibles */
+  }
+}
+</style>

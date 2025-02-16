@@ -1,0 +1,75 @@
+<app-navbar></app-navbar>
+<div class="page-container">
+  <div class="main-container">
+
+    <!-- Le asignamos el grupo formgroup configurado en el typescript-->
+    <form [formGroup]="formUser" class="form-container">
+      <div class="mb-3">
+        <label for="email" class="form-label">Introduce tu Gmail</label>
+        <input type="text" formControlName="gmail"  class="form-control">
+
+        <!-- El hidden funciona como un if, el valid hara que no salte la alarma, lo mismo pristine, ya que este devuelve true si esta vacio (sale la alarama si es false)-->
+        <div class="alert alert-danger" [hidden]="formUser.get('gmail')?.valid || formUser.get('gmail')?.pristine">
+            <!-- hacemos 2 span-->
+             <!-- Vas a verificar una array, pero luego de verificar ese array-->
+              <!-- me buscara un indice con el nombre (required o email)-->
+             <span *ngIf="formUser.get('gmail')?.errors?.['required']"> El gmail es obligatorio</span>
+
+             <span *ngIf="formUser.get('gmail')?.errors?.['email']"> El email debe ser valido</span>
+       </div>
+
+
+        <div id="emailHelp" class="form-text">Nosotros no compartiremos tu Gmail con nadie.</div>
+      </div>
+
+      <!-- Nombre de Usuario-->
+      <div class="mb-3">
+        <label for="username" class="form-label">Introduce tu Usuario</label>
+        <input type="text" formControlName="nombreUsu" class="form-control">
+
+        <!-- El hidden funciona como un if, el valid hara que no salte la alarma, lo mismo pristine, ya que este devuelve true si esta vacio (sale la alarama si es false)-->
+        <div class="alert alert-danger" [hidden]="formUser.get('nombreUsu')?.valid || formUser.get('nombreUsu')?.pristine">
+             El nombre De usuario es obligatiorio
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="firstname" class="form-label">Introduce tu Nombre Real</label>
+        <input type="text" formControlName="nombreReal" class="form-control" [(ngModel)]="usuActual.nombreReal">
+        <div class="alert alert-danger" [hidden]="formUser.get('nombreReal')?.valid || formUser.get('nombreReal')?.pristine">
+          El nombre real es obligatorio 
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="lastname" class="form-label">Introduce tu Apellido Real</label>
+        <input type="text"  formControlName="apellidoReal" name="lastname" class="form-control">
+        <div class="alert alert-danger" [hidden]="formUser.get('apellidoReal')?.valid || formUser.get('apellidoReal')?.pristine">
+          El apellido es obligatorio
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" formControlName="contrasenia" name="contrasenia" class="form-control">
+        <div class="alert alert-danger" [hidden]="formUser.get('contrasenia')?.valid || formUser.get('contrasenia')?.pristine">
+          La contraseña necesita de minimo 3 caracteres
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
+        <input type="password"  formControlName="confcontrasenia" name="confirmPassword" class="form-control">
+        <div class="alert alert-danger" [hidden]="formUser.get('confcontrasenia')?.valid || formUser.get('confcontrasenia')?.pristine">
+          La contraseña necesita minimo de 3 caracteres
+        </div>
+      </div>
+
+      <!-- con disabled recogemos si (if) el formUser es invalido me bloque este boton-->
+      <button type="submit" class="btn btn-primary" [disabled]="formUser.invalid">Registrarme</button>
+    </form>
+  </div>
+</div>
+
+{{ usuActual | json }}
+<p></p>
+<app-sidebar-menu></app-sidebar-menu>
+<app-sidebar-carrito></app-sidebar-carrito>
+
+  

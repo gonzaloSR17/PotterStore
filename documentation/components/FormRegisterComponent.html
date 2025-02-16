@@ -1,0 +1,821 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>potter-storre-test documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	   <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/dark.css">
+    </head>
+    <body>
+          <script>
+               // Blocking script to avoid flickering dark mode
+               // Dark mode toggle button
+               var useDark = window.matchMedia('(prefers-color-scheme: dark)');
+               var darkModeState = useDark.matches;
+               var $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               var $darkModeToggles = document.querySelectorAll('.dark-mode-switch');
+               var darkModeStateLocal = localStorage.getItem('compodoc_darkmode-state');
+
+               function checkToggle(check) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].checked = check;
+                    }
+               }
+
+               function toggleDarkMode(state) {
+                    if (window.localStorage) {
+                         localStorage.setItem('compodoc_darkmode-state', state);
+                    }
+
+                    checkToggle(state);
+
+                    const hasClass = document.body.classList.contains('dark');
+
+                    if (state) {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.add('dark');
+                         }
+                         if (!hasClass) {
+                              document.body.classList.add('dark');
+                         }
+                    } else {
+                         for (var i = 0; i < $darkModeToggles.length; i++) {
+                              $darkModeToggles[i].classList.remove('dark');
+                         }
+                         if (hasClass) {
+                              document.body.classList.remove('dark');
+                         }
+                    }
+               }
+
+               useDark.addEventListener('change', function (evt) {
+                    toggleDarkMode(evt.matches);
+               });
+               if (darkModeStateLocal) {
+                    darkModeState = darkModeStateLocal === 'true';
+               }
+               toggleDarkMode(darkModeState);
+          </script>
+
+        <div class="navbar navbar-default navbar-fixed-top d-md-none p-0">
+               <div class="d-flex">
+                    <a href="../" class="navbar-brand">potter-storre-test documentation</a>
+                    <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+               </div>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="d-none d-md-block menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">Components</li>
+  <li class="breadcrumb-item"
+  >
+  FormRegisterComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a href="#info" class="nav-link active"
+                role="tab" id="info-tab" data-bs-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li class="nav-item">
+            <a href="#source" class="nav-link"
+                role="tab" id="source-tab" data-bs-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li class="nav-item">
+            <a href="#templateData" class="nav-link"
+                role="tab" id="templateData-tab" data-bs-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li class="nav-item">
+            <a href="#tree" class="nav-link"
+                role="tab" id="tree-tab" data-bs-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/component/form-register/form-register.component.ts</code>
+</p>
+
+
+
+
+
+
+<section data-compodoc="block-metadata">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover metadata">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-form-register</code></td>
+            </tr>
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./form-register.component.html</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">styleUrl</td>
+                <td class="col-md-9"><code>./form-register.component.css</code></td>
+            </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section data-compodoc="block-index">
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#apellidoReal" >apellidoReal</a>
+                            </li>
+                            <li>
+                                <a href="#confcontrasenia" >confcontrasenia</a>
+                            </li>
+                            <li>
+                                <a href="#contrasenia" >contrasenia</a>
+                            </li>
+                            <li>
+                                <a href="#formUser" >formUser</a>
+                            </li>
+                            <li>
+                                <a href="#gmail" >gmail</a>
+                            </li>
+                            <li>
+                                <a href="#nombreReal" >nombreReal</a>
+                            </li>
+                            <li>
+                                <a href="#nombreUsu" >nombreUsu</a>
+                            </li>
+                            <li>
+                                <a href="#usuActual" >usuActual</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#comprobarContrasenia" >comprobarContrasenia</a>
+                            </li>
+                            <li>
+                                <a href="#onSubmit" >onSubmit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+
+
+
+
+
+    <section data-compodoc="block-methods">
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="comprobarContrasenia"></a>
+                    <span class="name">
+                        <span ><b>comprobarContrasenia</b></span>
+                        <a href="#comprobarContrasenia"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>comprobarContrasenia()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="47"
+                                    class="link-to-prism">src/app/component/form-register/form-register.component.ts:47</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onSubmit"></a>
+                    <span class="name">
+                        <span ><b>onSubmit</b></span>
+                        <a href="#onSubmit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onSubmit()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="57"
+                                    class="link-to-prism">src/app/component/form-register/form-register.component.ts:57</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="apellidoReal"></a>
+                    <span class="name">
+                        <span ><b>apellidoReal</b></span>
+                        <a href="#apellidoReal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [Validators.required])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="43" class="link-to-prism">src/app/component/form-register/form-register.component.ts:43</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confcontrasenia"></a>
+                    <span class="name">
+                        <span ><b>confcontrasenia</b></span>
+                        <a href="#confcontrasenia"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [Validators.required])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="45" class="link-to-prism">src/app/component/form-register/form-register.component.ts:45</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="contrasenia"></a>
+                    <span class="name">
+                        <span ><b>contrasenia</b></span>
+                        <a href="#contrasenia"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [Validators.required, Validators.minLength(6)])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/component/form-register/form-register.component.ts:44</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="formUser"></a>
+                    <span class="name">
+                        <span ><b>formUser</b></span>
+                        <a href="#formUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormGroup({
+    &#x27;gmail&#x27;: new FormControl(&#x27;&#x27;, [Validators.required, Validators.email]),
+    &#x27;nombreUsu&#x27;: new FormControl(&#x27;&#x27;, [Validators.required, Validators.minLength(3)]),
+    &#x27;nombreReal&#x27;: new FormControl(&#x27;&#x27;, [Validators.required]),
+    &#x27;apellidoReal&#x27;: new FormControl(&#x27;&#x27;, [Validators.required]),
+    &#x27;contrasenia&#x27; : new FormControl(&#x27;&#x27;, [Validators.required, Validators.minLength(6)]),
+    &#x27;confcontrasenia&#x27;: new FormControl(&#x27;&#x27;, [Validators.required]) 
+  })</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/component/form-register/form-register.component.ts:19</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="gmail"></a>
+                    <span class="name">
+                        <span ><b>gmail</b></span>
+                        <a href="#gmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [Validators.required, Validators.email])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="40" class="link-to-prism">src/app/component/form-register/form-register.component.ts:40</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nombreReal"></a>
+                    <span class="name">
+                        <span ><b>nombreReal</b></span>
+                        <a href="#nombreReal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [Validators.required])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="42" class="link-to-prism">src/app/component/form-register/form-register.component.ts:42</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="nombreUsu"></a>
+                    <span class="name">
+                        <span ><b>nombreUsu</b></span>
+                        <a href="#nombreUsu"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>new FormControl(&#x27;&#x27;, [Validators.required, Validators.minLength(3)])</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/component/form-register/form-register.component.ts:41</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="usuActual"></a>
+                    <span class="name">
+                        <span ><b>usuActual</b></span>
+                        <a href="#usuActual"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/usuario.html" target="_self" >usuario</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>{
+  nombreUsu: &#x27;&#x27;,
+    nombreReal: &#x27;&#x27;,
+    apellidoReal: &#x27;&#x27;,
+    contrasenia: &#x27;&#x27;,
+    confcontrasenia: &#x27;&#x27;,
+    gmail: &#x27;&#x27;
+}</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="29" class="link-to-prism">src/app/component/form-register/form-register.component.ts:29</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { NavbarComponent } from &#x27;../../shared/components/navbar/navbar.component&#x27;;
+import { usuario } from &#x27;../../interfaces/usuario/usuario.interface&#x27;;
+import { NgModel } from &#x27;@angular/forms&#x27;;
+import { FormControl, Validators, FormGroup } from &#x27;@angular/forms&#x27;;
+
+@Component({
+  selector: &#x27;app-form-register&#x27;,
+  standalone: false,
+  
+  templateUrl: &#x27;./form-register.component.html&#x27;,
+  styleUrl: &#x27;./form-register.component.css&#x27;
+})
+
+export class FormRegisterComponent {
+
+  // Declaramos un formulario grupal para las validaciones
+
+  formUser &#x3D; new FormGroup({
+    &#x27;gmail&#x27;: new FormControl(&#x27;&#x27;, [Validators.required, Validators.email]),
+    &#x27;nombreUsu&#x27;: new FormControl(&#x27;&#x27;, [Validators.required, Validators.minLength(3)]),
+    &#x27;nombreReal&#x27;: new FormControl(&#x27;&#x27;, [Validators.required]),
+    &#x27;apellidoReal&#x27;: new FormControl(&#x27;&#x27;, [Validators.required]),
+    &#x27;contrasenia&#x27; : new FormControl(&#x27;&#x27;, [Validators.required, Validators.minLength(6)]),
+    &#x27;confcontrasenia&#x27;: new FormControl(&#x27;&#x27;, [Validators.required]) 
+  });
+
+  // Usuario actual que sera utilizado, es necesario iniciarlo
+usuActual: usuario &#x3D; {
+  nombreUsu: &#x27;&#x27;,
+    nombreReal: &#x27;&#x27;,
+    apellidoReal: &#x27;&#x27;,
+    contrasenia: &#x27;&#x27;,
+    confcontrasenia: &#x27;&#x27;,
+    gmail: &#x27;&#x27;
+};
+
+// Delaramos las variables a usar
+
+  gmail &#x3D; new FormControl(&#x27;&#x27;, [Validators.required, Validators.email]);
+  nombreUsu &#x3D; new FormControl(&#x27;&#x27;, [Validators.required, Validators.minLength(3)]);
+  nombreReal &#x3D; new FormControl(&#x27;&#x27;, [Validators.required]);
+  apellidoReal &#x3D; new FormControl(&#x27;&#x27;, [Validators.required]);
+  contrasenia &#x3D; new FormControl(&#x27;&#x27;, [Validators.required, Validators.minLength(6)]);
+  confcontrasenia &#x3D; new FormControl(&#x27;&#x27;, [Validators.required]);
+
+  comprobarContrasenia(): boolean{
+
+    if (this.contrasenia &#x3D;&#x3D; this.confcontrasenia) {
+      return true;
+    } else {
+      return false;
+    }
+
+  }
+
+  onSubmit(){
+
+    if(this.comprobarContrasenia() &#x3D;&#x3D; true) {
+
+    } else {
+
+    }
+  }
+  // funcion a usar para el formulario
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;app-navbar&gt;&lt;/app-navbar&gt;
+&lt;div class&#x3D;&quot;page-container&quot;&gt;
+  &lt;div class&#x3D;&quot;main-container&quot;&gt;
+
+    &lt;!-- Le asignamos el grupo formgroup configurado en el typescript--&gt;
+    &lt;form [formGroup]&#x3D;&quot;formUser&quot; class&#x3D;&quot;form-container&quot;&gt;
+      &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+        &lt;label for&#x3D;&quot;email&quot; class&#x3D;&quot;form-label&quot;&gt;Introduce tu Gmail&lt;/label&gt;
+        &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;gmail&quot;  class&#x3D;&quot;form-control&quot;&gt;
+
+        &lt;!-- El hidden funciona como un if, el valid hara que no salte la alarma, lo mismo pristine, ya que este devuelve true si esta vacio (sale la alarama si es false)--&gt;
+        &lt;div class&#x3D;&quot;alert alert-danger&quot; [hidden]&#x3D;&quot;formUser.get(&#x27;gmail&#x27;)?.valid || formUser.get(&#x27;gmail&#x27;)?.pristine&quot;&gt;
+            &lt;!-- hacemos 2 span--&gt;
+             &lt;!-- Vas a verificar una array, pero luego de verificar ese array--&gt;
+              &lt;!-- me buscara un indice con el nombre (required o email)--&gt;
+             &lt;span *ngIf&#x3D;&quot;formUser.get(&#x27;gmail&#x27;)?.errors?.[&#x27;required&#x27;]&quot;&gt; El gmail es obligatorio&lt;/span&gt;
+
+             &lt;span *ngIf&#x3D;&quot;formUser.get(&#x27;gmail&#x27;)?.errors?.[&#x27;email&#x27;]&quot;&gt; El email debe ser valido&lt;/span&gt;
+       &lt;/div&gt;
+
+
+        &lt;div id&#x3D;&quot;emailHelp&quot; class&#x3D;&quot;form-text&quot;&gt;Nosotros no compartiremos tu Gmail con nadie.&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Nombre de Usuario--&gt;
+      &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+        &lt;label for&#x3D;&quot;username&quot; class&#x3D;&quot;form-label&quot;&gt;Introduce tu Usuario&lt;/label&gt;
+        &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;nombreUsu&quot; class&#x3D;&quot;form-control&quot;&gt;
+
+        &lt;!-- El hidden funciona como un if, el valid hara que no salte la alarma, lo mismo pristine, ya que este devuelve true si esta vacio (sale la alarama si es false)--&gt;
+        &lt;div class&#x3D;&quot;alert alert-danger&quot; [hidden]&#x3D;&quot;formUser.get(&#x27;nombreUsu&#x27;)?.valid || formUser.get(&#x27;nombreUsu&#x27;)?.pristine&quot;&gt;
+             El nombre De usuario es obligatiorio
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+        &lt;label for&#x3D;&quot;firstname&quot; class&#x3D;&quot;form-label&quot;&gt;Introduce tu Nombre Real&lt;/label&gt;
+        &lt;input type&#x3D;&quot;text&quot; formControlName&#x3D;&quot;nombreReal&quot; class&#x3D;&quot;form-control&quot; [(ngModel)]&#x3D;&quot;usuActual.nombreReal&quot;&gt;
+        &lt;div class&#x3D;&quot;alert alert-danger&quot; [hidden]&#x3D;&quot;formUser.get(&#x27;nombreReal&#x27;)?.valid || formUser.get(&#x27;nombreReal&#x27;)?.pristine&quot;&gt;
+          El nombre real es obligatorio 
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+        &lt;label for&#x3D;&quot;lastname&quot; class&#x3D;&quot;form-label&quot;&gt;Introduce tu Apellido Real&lt;/label&gt;
+        &lt;input type&#x3D;&quot;text&quot;  formControlName&#x3D;&quot;apellidoReal&quot; name&#x3D;&quot;lastname&quot; class&#x3D;&quot;form-control&quot;&gt;
+        &lt;div class&#x3D;&quot;alert alert-danger&quot; [hidden]&#x3D;&quot;formUser.get(&#x27;apellidoReal&#x27;)?.valid || formUser.get(&#x27;apellidoReal&#x27;)?.pristine&quot;&gt;
+          El apellido es obligatorio
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+        &lt;label for&#x3D;&quot;password&quot; class&#x3D;&quot;form-label&quot;&gt;Contraseña&lt;/label&gt;
+        &lt;input type&#x3D;&quot;password&quot; formControlName&#x3D;&quot;contrasenia&quot; name&#x3D;&quot;contrasenia&quot; class&#x3D;&quot;form-control&quot;&gt;
+        &lt;div class&#x3D;&quot;alert alert-danger&quot; [hidden]&#x3D;&quot;formUser.get(&#x27;contrasenia&#x27;)?.valid || formUser.get(&#x27;contrasenia&#x27;)?.pristine&quot;&gt;
+          La contraseña necesita de minimo 3 caracteres
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;mb-3&quot;&gt;
+        &lt;label for&#x3D;&quot;confirm-password&quot; class&#x3D;&quot;form-label&quot;&gt;Confirmar Contraseña&lt;/label&gt;
+        &lt;input type&#x3D;&quot;password&quot;  formControlName&#x3D;&quot;confcontrasenia&quot; name&#x3D;&quot;confirmPassword&quot; class&#x3D;&quot;form-control&quot;&gt;
+        &lt;div class&#x3D;&quot;alert alert-danger&quot; [hidden]&#x3D;&quot;formUser.get(&#x27;confcontrasenia&#x27;)?.valid || formUser.get(&#x27;confcontrasenia&#x27;)?.pristine&quot;&gt;
+          La contraseña necesita minimo de 3 caracteres
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;!-- con disabled recogemos si (if) el formUser es invalido me bloque este boton--&gt;
+      &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot; [disabled]&#x3D;&quot;formUser.invalid&quot;&gt;Registrarme&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+{{ usuActual | json }}
+&lt;p&gt;&lt;/p&gt;
+&lt;app-sidebar-menu&gt;&lt;/app-sidebar-menu&gt;
+&lt;app-sidebar-carrito&gt;&lt;/app-sidebar-carrito&gt;
+
+  </code></pre>
+    </div>
+
+
+    <div class="tab-pane fade " id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><app-navbar></app-navbar><div class="page-container">  <div class="main-container">    <!-- Le asignamos el grupo formgroup configurado en el typescript-->    <form [formGroup]="formUser" class="form-container">      <div class="mb-3">        <label for="email" class="form-label">Introduce tu Gmail</label>        <input type="text" formControlName="gmail"  class="form-control">        <!-- El hidden funciona como un if, el valid hara que no salte la alarma, lo mismo pristine, ya que este devuelve true si esta vacio (sale la alarama si es false)-->        <div class="alert alert-danger" [hidden]="formUser.get(\'gmail\')?.valid || formUser.get(\'gmail\')?.pristine">            <!-- hacemos 2 span-->             <!-- Vas a verificar una array, pero luego de verificar ese array-->              <!-- me buscara un indice con el nombre (required o email)-->             <span *ngIf="formUser.get(\'gmail\')?.errors?.[\'required\']"> El gmail es obligatorio</span>             <span *ngIf="formUser.get(\'gmail\')?.errors?.[\'email\']"> El email debe ser valido</span>       </div>        <div id="emailHelp" class="form-text">Nosotros no compartiremos tu Gmail con nadie.</div>      </div>      <!-- Nombre de Usuario-->      <div class="mb-3">        <label for="username" class="form-label">Introduce tu Usuario</label>        <input type="text" formControlName="nombreUsu" class="form-control">        <!-- El hidden funciona como un if, el valid hara que no salte la alarma, lo mismo pristine, ya que este devuelve true si esta vacio (sale la alarama si es false)-->        <div class="alert alert-danger" [hidden]="formUser.get(\'nombreUsu\')?.valid || formUser.get(\'nombreUsu\')?.pristine">             El nombre De usuario es obligatiorio        </div>      </div>      <div class="mb-3">        <label for="firstname" class="form-label">Introduce tu Nombre Real</label>        <input type="text" formControlName="nombreReal" class="form-control" [(ngModel)]="usuActual.nombreReal">        <div class="alert alert-danger" [hidden]="formUser.get(\'nombreReal\')?.valid || formUser.get(\'nombreReal\')?.pristine">          El nombre real es obligatorio         </div>      </div>      <div class="mb-3">        <label for="lastname" class="form-label">Introduce tu Apellido Real</label>        <input type="text"  formControlName="apellidoReal" name="lastname" class="form-control">        <div class="alert alert-danger" [hidden]="formUser.get(\'apellidoReal\')?.valid || formUser.get(\'apellidoReal\')?.pristine">          El apellido es obligatorio        </div>      </div>      <div class="mb-3">        <label for="password" class="form-label">Contraseña</label>        <input type="password" formControlName="contrasenia" name="contrasenia" class="form-control">        <div class="alert alert-danger" [hidden]="formUser.get(\'contrasenia\')?.valid || formUser.get(\'contrasenia\')?.pristine">          La contraseña necesita de minimo 3 caracteres        </div>      </div>      <div class="mb-3">        <label for="confirm-password" class="form-label">Confirmar Contraseña</label>        <input type="password"  formControlName="confcontrasenia" name="confirmPassword" class="form-control">        <div class="alert alert-danger" [hidden]="formUser.get(\'confcontrasenia\')?.valid || formUser.get(\'confcontrasenia\')?.pristine">          La contraseña necesita minimo de 3 caracteres        </div>      </div>      <!-- con disabled recogemos si (if) el formUser es invalido me bloque este boton-->      <button type="submit" class="btn btn-primary" [disabled]="formUser.invalid">Registrarme</button>    </form>  </div></div>{{ usuActual | json }}<p></p><app-sidebar-menu></app-sidebar-menu><app-sidebar-carrito></app-sidebar-carrito>  </div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'FormRegisterComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'FormRegisterComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script>
+               $darkModeToggleSwitchers = document.querySelectorAll('.dark-mode-switch input');
+               checkToggle(darkModeState);
+               if ($darkModeToggleSwitchers.length > 0) {
+                    for (var i = 0; i < $darkModeToggleSwitchers.length; i++) {
+                         $darkModeToggleSwitchers[i].addEventListener('change', function (event) {
+                              darkModeState = !darkModeState;
+                              toggleDarkMode(darkModeState);
+                         });
+                    }
+               }
+          </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+
+       <script src="../js/menu-wc.js" defer></script>
+       <script nomodule src="../js/menu-wc_es5.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
