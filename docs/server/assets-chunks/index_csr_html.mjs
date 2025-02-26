@@ -14,5 +14,5 @@ export default `<!doctype html>
 
   <!-- Bootstrap JavaScript desde un CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-FLLYT6X7.js" defer=""></script><script src="main-UHYD64ES.js" type="module"></script></body>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-FLLYT6X7.js" defer=""></script><script src="main-PFEABF3V.js" type="module"></script></body>
 </html>`;

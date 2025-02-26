@@ -22,5 +22,5 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
 
   <!-- Bootstrap JavaScript desde un CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-FLLYT6X7.js" defer></script><script src="main-UHYD64ES.js" type="module"></script>
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-FLLYT6X7.js" defer></script><script src="main-PFEABF3V.js" type="module"></script>
 <script id="ng-state" type="application/json">{"__nghData__":[{"t":{"7":"t0"},"c":{"7":[]}},{},{"t":{"6":"t3","7":"t4","8":"t5","9":"t6"},"c":{"6":[{"i":"t3","r":1}],"7":[],"8":[],"9":[]}},{"t":{"9":"t1","10":"t2"},"c":{"9":[{"i":"t1","r":1}],"10":[]}},{"c":{"1":[{"i":"c10028331","r":1}]}}]}</script></body></html>`;
