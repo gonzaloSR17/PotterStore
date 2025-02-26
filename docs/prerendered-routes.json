@@ -1,0 +1,13 @@
+{
+  "routes": {
+    "/PotterStore": {},
+    "/PotterStore/list/pedidos": {},
+    "/PotterStore/loggin": {},
+    "/PotterStore/pedido": {},
+    "/PotterStore/register": {},
+    "/PotterStore/wiki/book": {},
+    "/PotterStore/wiki/movies": {},
+    "/PotterStore/wiki/potions": {},
+    "/PotterStore/wiki/spells": {}
+  }
+}
