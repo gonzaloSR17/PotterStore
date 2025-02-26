@@ -1,7 +1,9 @@
 export interface libros {
+    idUser?: number;
+    price?: number;
     serial:        string;
     title:         string;
-    summary:       string;
+    summary?:       string;
     release_date?: string;
     dedication:    string;
     pages:         string;

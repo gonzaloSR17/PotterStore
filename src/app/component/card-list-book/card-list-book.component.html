@@ -1,28 +1,63 @@
 <app-navbar></app-navbar>  
-<app-pages-wiki></app-pages-wiki> 
+<app-pages-wiki></app-pages-wiki>  
 
+<!-- Barra de búsqueda -->
+<div class="container text-center mt-3">
+  <input #nombreBusquedaPersonaje type="text" class="cajaBusqueda" placeholder="Buscar...">
+  <button class="lupa">🔍</button>
+</div>
 
-<!--Para imprimir libros--> 
-
-<div class="d-flex justify-content-center mt-4">
-
-  <div class="card mb-3" style="max-width: 540px;">
-    <div *ngFor="let Libros of resBook" class="row no-gutters">
-      <div class="col-md-4">
-        <img [src]="Libros.cover" class="card-img" alt="...">
-      </div>
-      <div class="col-md-8">
+<!-- Contenedor de libros -->
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div *ngFor="let Libros of resBook" class="col-12 col-md-4 col-lg-2 mb-3">
+      <div class="card book-card">
+        <img [src]="Libros.cover" class="card-img-top" alt="Portada del libro">
         <div class="card-body">
-          <h5 class="card-title">{{Libros.title}}</h5>
-          <p class="card-text">{{Libros.summary}}</p>
-          <p class="card-text"> <small class="text-muted">Numbers Pages: {{Libros.pages}} - {{Libros.author}} - {{Libros.release_date}} </small></p>
+          <h6 class="card-title">{{ Libros.title }}</h6>
+          <p class="card-text">{{ Libros.summary | slice:0:80 }}...</p>
+          <p class="card-text">
+            <small class="text-muted">Páginas: {{ Libros.pages }}</small>
+          </p>
+          <button (click)="detallesLibro(Libros)" class="btn btn-primary btn-sm">Ver detalles</button>
         </div>
       </div>
     </div>
   </div>
-  
-
 </div>
 
-  <app-sidebar-menu></app-sidebar-menu>
-  <app-sidebar-carrito></app-sidebar-carrito>
+<!-- Modal para mostrar detalles del libro -->
+<div class="modal fade" id="detalleLibroModal" tabindex="-1" aria-labelledby="detalleLibroLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detalleLibroLabel">{{ libroSeleccionado?.title }}</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <!-- Imagen a la izquierda -->
+          <div class="col-md-4">
+            <img [src]="libroSeleccionado?.cover" class="img-fluid rounded shadow" alt="Portada del libro">
+          </div>
+          <!-- Texto a la derecha -->
+          <div class="col-md-8">
+            <p><strong>Sinopsis:</strong></p>
+            <p>{{ libroSeleccionado?.summary }}</p>
+            <p><strong>Páginas:</strong> {{ libroSeleccionado?.pages }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <!-- Botón rojo "Añadir al carrito" con la función asignada -->
+        <button class="btn btn-danger" (click)="agregarAlCarrito(libroSeleccionado!)">
+          🛒 Añadir al carrito
+        </button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-sidebar-menu></app-sidebar-menu>
+<app-sidebar-carrito></app-sidebar-carrito>

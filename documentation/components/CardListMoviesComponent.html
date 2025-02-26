@@ -120,13 +120,6 @@
 </p>
 
 
-    <p class="comment">
-        <h3>Description</h3>
-    </p>
-    <p class="comment">
-        <p>Componente que muestra una lista de películas de Harry Potter.</p>
-
-    </p>
 
 
 
@@ -181,6 +174,21 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#peliculaSeleccionada" >peliculaSeleccionada</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -190,6 +198,12 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#agregarPeliculaACesta" >agregarPeliculaACesta</a>
+                            </li>
+                            <li>
+                                <a href="#detallesPelicula" >detallesPelicula</a>
+                            </li>
                             <li>
                                 <a href="#imprimirPeliculasHp" >imprimirPeliculasHp</a>
                             </li>
@@ -228,19 +242,17 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(hpServices: <a href="../injectables/HarryPotterServices.html" target="_self">HarryPotterServices</a>)</code>
+<code>constructor(hpServices: <a href="../injectables/HarryPotterServices.html" target="_self">HarryPotterServices</a>, cartService: <a href="../injectables/CartService.html" target="_self">CartService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:22</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:18</a></div>
                             </td>
                         </tr>
 
                 <tr>
                     <td class="col-md-4">
-                            <div class="io-description"><p>Constructor del componente que inyecta el servicio de Harry Potter.</p>
-</div>
                             <div>
                                     <b>Parameters :</b>
                                     <table class="params">
@@ -249,7 +261,6 @@
                                                 <td>Name</td>
                                                     <td>Type</td>
                                                 <td>Optional</td>
-                                                    <td>Description</td>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -264,10 +275,18 @@
                                                             No
                                                     </td>
                                                     
+                                                </tr>
+                                                <tr>
+                                                        <td>cartService</td>
+                                                  
                                                         <td>
-                                                                <p>Servicio que obtiene las películas de Harry Potter.</p>
-
+                                                                        <code><a href="../injectables/CartService.html" target="_self" >CartService</a></code>
                                                         </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
                                                 </tr>
                                         </tbody>
                                     </table>
@@ -301,15 +320,9 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="22" class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:22</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:16</a></div>
                             </td>
                         </tr>
-                <tr>
-                    <td class="col-md-4">
-                        <div class="io-description"><p>Array que almacena las películas obtenidas del servicio.</p>
-</div>
-                    </td>
-                </tr>
             </tbody>
         </table>
 </section>
@@ -321,6 +334,140 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="agregarPeliculaACesta"></a>
+                    <span class="name">
+                        <span ><b>agregarPeliculaACesta</b></span>
+                        <a href="#agregarPeliculaACesta"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>agregarPeliculaACesta(peliculaHP: <a href="../interfaces/movie.html" target="_self">movie</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="39"
+                                    class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:39</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>peliculaHP</td>
+                                            <td>
+                                                            <code><a href="../interfaces/movie.html" target="_self" >movie</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="detallesPelicula"></a>
+                    <span class="name">
+                        <span ><b>detallesPelicula</b></span>
+                        <a href="#detallesPelicula"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>detallesPelicula(pelicula: <a href="../interfaces/movie.html" target="_self">movie</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="35"
+                                    class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:35</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>pelicula</td>
+                                            <td>
+                                                            <code><a href="../interfaces/movie.html" target="_self" >movie</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -341,16 +488,14 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="41"
-                                    class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:41</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="26"
+                                    class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:26</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                        <div class="io-description"><p>Obtiene la lista de películas desde el servicio y la almacena en resMovies.</p>
-</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -380,16 +525,14 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="34"
-                                    class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:34</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="22"
+                                    class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:22</a></div>
                         </td>
                     </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                        <div class="io-description"><p>Método que se ejecuta al inicializar el componente.</p>
-</div>
 
                         <div class="io-description">
                             <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -397,6 +540,44 @@
                         </div>
                 </td>
             </tr>
+        </tbody>
+    </table>
+</section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="peliculaSeleccionada"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>peliculaSeleccionada</b></span>
+                        <a href="#peliculaSeleccionada"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/movie.html" target="_self" >movie | null</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/component/card-list-movies/card-list-movies.component.ts:18</a></div>
+                        </td>
+                    </tr>
+
+
         </tbody>
     </table>
 </section>
@@ -408,12 +589,9 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
 import { movie } from &#x27;../../interfaces/harrypotter/movies.interface&#x27;;
 import { HarryPotterServices } from &#x27;../../services/harrypotterServices/harrypotter.services&#x27;;
+import { CartService } from &#x27;../../services/cart/cart-service.service&#x27;;
+import { pelicula } from &#x27;../../interfaces/usuario/pelicula.interface&#x27;;
 
-/**
- * Componente que muestra una lista de películas de Harry Potter.
- * 
- * @author Gonzalo Sanchez-Ros Paz
- */
 @Component({
   selector: &#x27;app-card-list-movies&#x27;,
   standalone: false,
@@ -421,30 +599,18 @@ import { HarryPotterServices } from &#x27;../../services/harrypotterServices/har
   styleUrl: &#x27;./card-list-movies.component.css&#x27;
 })
 export class CardListMoviesComponent {
-
-  /**
-   * Array que almacena las películas obtenidas del servicio.
-   */
+  
   @Input()
   public resMovies: movie[] &#x3D; [];
 
-  /**
-   * Constructor del componente que inyecta el servicio de Harry Potter.
-   * 
-   * @param hpServices Servicio que obtiene las películas de Harry Potter.
-   */
-  constructor(private hpServices: HarryPotterServices) {}
+  public peliculaSeleccionada: movie | null &#x3D; null;
 
-  /**
-   * Método que se ejecuta al inicializar el componente.
-   */
+  constructor(private hpServices: HarryPotterServices, private cartService: CartService) {}
+
   ngOnInit(): void {
     this.imprimirPeliculasHp();
   }
 
-  /**
-   * Obtiene la lista de películas desde el servicio y la almacena en resMovies.
-   */
   imprimirPeliculasHp(): void {
     this.hpServices.fetchMovies().subscribe(
       (movie) &#x3D;&gt; {
@@ -452,6 +618,22 @@ export class CardListMoviesComponent {
         console.log(&#x27;Resultados encontrados:&#x27;, this.resMovies);
       }
     );
+  }
+
+  detallesPelicula(pelicula: movie): void {
+    this.peliculaSeleccionada &#x3D; pelicula;
+  }
+
+  agregarPeliculaACesta(peliculaHP: movie): void {
+    const peliAgrega: pelicula &#x3D; {
+      price: 20, // Precio fijo (puedes modificarlo dinámicamente si es necesario)
+      serial: peliculaHP.serial,
+      title: peliculaHP.title,
+      poster: peliculaHP.poster
+    };
+
+    this.cartService.agregarPelicula(peliAgrega);
+    alert(&#x60;${peliculaHP.title} ha sido añadida al carrito.&#x60;);
   }
 }
 </code></pre>
@@ -461,23 +643,33 @@ export class CardListMoviesComponent {
         <pre class="line-numbers"><code class="language-html">&lt;app-navbar&gt;&lt;/app-navbar&gt;  
 &lt;app-pages-wiki&gt;&lt;/app-pages-wiki&gt; 
 
+&lt;div class&#x3D;&quot;wikiPortada&quot;&gt;
+  &lt;p class&#x3D;&quot;letra1&quot;&gt;peliculas Harry Potter&lt;/p&gt;
+&lt;/div&gt;
+
 &lt;div class&#x3D;&quot;d-flex justify-content-center mt-4&quot;&gt;
-&lt;div class&#x3D;&quot;container mt-4&quot;&gt;
+  &lt;div class&#x3D;&quot;container mt-4&quot;&gt;
     &lt;div class&#x3D;&quot;row g-4&quot;&gt;
       &lt;div class&#x3D;&quot;col-md-4&quot; *ngFor&#x3D;&quot;let pelicula of resMovies&quot;&gt;
-        &lt;div class&#x3D;&quot;card card-hover h-100&quot; style&#x3D;&quot;width: 100%;&quot;&gt;
+        &lt;div class&#x3D;&quot;card card-hover h-100&quot;&gt;
           &lt;img [src]&#x3D;&quot;pelicula.poster&quot; class&#x3D;&quot;card-img-top img-fluid&quot; alt&#x3D;&quot;Poster de {{ pelicula.title }}&quot;&gt;
           &lt;div class&#x3D;&quot;card-body&quot;&gt;
             &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{ pelicula.title }}&lt;/h5&gt;
             &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ pelicula.summary }}&lt;/p&gt;
           &lt;/div&gt;
           &lt;ul class&#x3D;&quot;list-group list-group-flush&quot;&gt;
-            &lt;li class&#x3D;&quot;list-group-item&quot;&gt;Release Date: {{ pelicula.release_date | date }}&lt;/li&gt;
-            &lt;li class&#x3D;&quot;list-group-item&quot;&gt;Rating: {{ pelicula.rating }}&lt;/li&gt;
-            &lt;li class&#x3D;&quot;list-group-item&quot;&gt;Running Time: {{ pelicula.running_time }}&lt;/li&gt;
+            &lt;li class&#x3D;&quot;list-group-item&quot;&gt;Fecha de estreno: {{ pelicula.release_date | date }}&lt;/li&gt;
+            &lt;li class&#x3D;&quot;list-group-item&quot;&gt;Calificación: {{ pelicula.rating }}&lt;/li&gt;
+            &lt;li class&#x3D;&quot;list-group-item&quot;&gt;Duración: {{ pelicula.running_time }} min&lt;/li&gt;
           &lt;/ul&gt;
-          &lt;div class&#x3D;&quot;card-body&quot;&gt;
-            &lt;a [href]&#x3D;&quot;pelicula.wiki&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;card-link&quot;&gt;More Info&lt;/a&gt;
+          &lt;div class&#x3D;&quot;card-body d-flex flex-column&quot;&gt;
+            &lt;a [href]&#x3D;&quot;pelicula.wiki&quot; target&#x3D;&quot;_blank&quot; class&#x3D;&quot;card-link&quot;&gt;Más información&lt;/a&gt;
+            &lt;!-- Botón con mejor separación --&gt;
+            &lt;button class&#x3D;&quot;btn btn-primary btn-sm mt-3&quot; 
+                    (click)&#x3D;&quot;detallesPelicula(pelicula)&quot; 
+                    data-bs-toggle&#x3D;&quot;modal&quot; data-bs-target&#x3D;&quot;#detallePeliculaModal&quot;&gt;
+              🎬 Ver detalles
+            &lt;/button&gt;
           &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -485,8 +677,43 @@ export class CardListMoviesComponent {
   &lt;/div&gt;
 &lt;/div&gt;
 
-  &lt;app-sidebar-menu&gt;&lt;/app-sidebar-menu&gt;
-  &lt;app-sidebar-carrito&gt;&lt;/app-sidebar-carrito&gt;</code></pre>
+&lt;!-- Modal para mostrar detalles de la película --&gt;
+&lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;detallePeliculaModal&quot; tabindex&#x3D;&quot;-1&quot; aria-labelledby&#x3D;&quot;detallePeliculaLabel&quot; aria-hidden&#x3D;&quot;true&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog modal-lg&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+      &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+        &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;detallePeliculaLabel&quot;&gt;{{ peliculaSeleccionada?.title }}&lt;/h5&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn-close&quot; data-bs-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;!-- Imagen a la izquierda --&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;img [src]&#x3D;&quot;peliculaSeleccionada?.poster&quot; class&#x3D;&quot;img-fluid rounded shadow&quot; alt&#x3D;&quot;Poster de la película&quot;&gt;
+          &lt;/div&gt;
+          &lt;!-- Información a la derecha --&gt;
+          &lt;div class&#x3D;&quot;col-md-8&quot;&gt;
+            &lt;p&gt;&lt;strong&gt;Sinopsis:&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;{{ peliculaSeleccionada?.summary }}&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Fecha de estreno:&lt;/strong&gt; {{ peliculaSeleccionada?.release_date | date }}&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Calificación:&lt;/strong&gt; {{ peliculaSeleccionada?.rating }}&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Duración:&lt;/strong&gt; {{ peliculaSeleccionada?.running_time }} min&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+        &lt;button class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&quot;agregarPeliculaACesta(peliculaSeleccionada!)&quot;&gt;
+          Añadir al carrito
+        &lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-secondary&quot; data-bs-dismiss&#x3D;&quot;modal&quot;&gt;Cerrar&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;app-sidebar-menu&gt;&lt;/app-sidebar-menu&gt;
+&lt;app-sidebar-carrito&gt;&lt;/app-sidebar-carrito&gt;
+</code></pre>
     </div>
 
 
@@ -515,8 +742,8 @@ export class CardListMoviesComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-navbar></app-navbar>  <app-pages-wiki></app-pages-wiki> <div class="d-flex justify-content-center mt-4"><div class="container mt-4">    <div class="row g-4">      <div class="col-md-4" *ngFor="let pelicula of resMovies">        <div class="card card-hover h-100" style="width: 100%;">          <img [src]="pelicula.poster" class="card-img-top img-fluid" alt="Poster de {{ pelicula.title }}">          <div class="card-body">            <h5 class="card-title">{{ pelicula.title }}</h5>            <p class="card-text">{{ pelicula.summary }}</p>          </div>          <ul class="list-group list-group-flush">            <li class="list-group-item">Release Date: {{ pelicula.release_date | date }}</li>            <li class="list-group-item">Rating: {{ pelicula.rating }}</li>            <li class="list-group-item">Running Time: {{ pelicula.running_time }}</li>          </ul>          <div class="card-body">            <a [href]="pelicula.wiki" target="_blank" class="card-link">More Info</a>          </div>        </div>      </div>    </div>  </div></div>  <app-sidebar-menu></app-sidebar-menu>  <app-sidebar-carrito></app-sidebar-carrito></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
+        var COMPONENT_TEMPLATE = '<div><app-navbar></app-navbar>  <app-pages-wiki></app-pages-wiki> <div class="wikiPortada">  <p class="letra1">peliculas Harry Potter</p></div><div class="d-flex justify-content-center mt-4">  <div class="container mt-4">    <div class="row g-4">      <div class="col-md-4" *ngFor="let pelicula of resMovies">        <div class="card card-hover h-100">          <img [src]="pelicula.poster" class="card-img-top img-fluid" alt="Poster de {{ pelicula.title }}">          <div class="card-body">            <h5 class="card-title">{{ pelicula.title }}</h5>            <p class="card-text">{{ pelicula.summary }}</p>          </div>          <ul class="list-group list-group-flush">            <li class="list-group-item">Fecha de estreno: {{ pelicula.release_date | date }}</li>            <li class="list-group-item">Calificación: {{ pelicula.rating }}</li>            <li class="list-group-item">Duración: {{ pelicula.running_time }} min</li>          </ul>          <div class="card-body d-flex flex-column">            <a [href]="pelicula.wiki" target="_blank" class="card-link">Más información</a>            <!-- Botón con mejor separación -->            <button class="btn btn-primary btn-sm mt-3"                     (click)="detallesPelicula(pelicula)"                     data-bs-toggle="modal" data-bs-target="#detallePeliculaModal">              🎬 Ver detalles            </button>          </div>        </div>      </div>    </div>  </div></div><!-- Modal para mostrar detalles de la película --><div class="modal fade" id="detallePeliculaModal" tabindex="-1" aria-labelledby="detallePeliculaLabel" aria-hidden="true">  <div class="modal-dialog modal-lg">    <div class="modal-content">      <div class="modal-header">        <h5 class="modal-title" id="detallePeliculaLabel">{{ peliculaSeleccionada?.title }}</h5>        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>      </div>      <div class="modal-body">        <div class="row">          <!-- Imagen a la izquierda -->          <div class="col-md-4">            <img [src]="peliculaSeleccionada?.poster" class="img-fluid rounded shadow" alt="Poster de la película">          </div>          <!-- Información a la derecha -->          <div class="col-md-8">            <p><strong>Sinopsis:</strong></p>            <p>{{ peliculaSeleccionada?.summary }}</p>            <p><strong>Fecha de estreno:</strong> {{ peliculaSeleccionada?.release_date | date }}</p>            <p><strong>Calificación:</strong> {{ peliculaSeleccionada?.rating }}</p>            <p><strong>Duración:</strong> {{ peliculaSeleccionada?.running_time }} min</p>          </div>        </div>      </div>      <div class="modal-footer">        <button class="btn btn-danger" (click)="agregarPeliculaACesta(peliculaSeleccionada!)">          Añadir al carrito        </button>        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>      </div>    </div>  </div></div><app-sidebar-menu></app-sidebar-menu><app-sidebar-carrito></app-sidebar-carrito></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormLogginComponent', 'selector': 'app-form-loggin'},{'name': 'FormPedidoComponent', 'selector': 'app-form-pedido'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'ListPedidoComponent', 'selector': 'app-list-pedido'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CardListMoviesComponent'};
 </script>

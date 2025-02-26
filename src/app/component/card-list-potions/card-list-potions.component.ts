@@ -15,6 +15,10 @@ import { HarryPotterServices } from '../../services/harrypotterServices/harrypot
 })
 export class CardListPotionsComponent {
 
+  mostrarBoton: boolean = true;
+  //Two-Way Binding con ngmodel con textoIngresado
+  textoIngresado: string = '';
+
   /**
    * Lista de pociones obtenidas desde el servicio.
    */
@@ -33,6 +37,8 @@ export class CardListPotionsComponent {
    * Llama a la función para obtener las pociones.
    */
   ngOnInit(): void {
+    this.mostrarBoton = true;
+    this.hpServices.contadorPociones = 1;
     this.imprimirPociones();
   }
 
@@ -78,4 +84,32 @@ export class CardListPotionsComponent {
     const element = event.target as HTMLImageElement;
     element.src = '../assets/error.png'; 
   }
+
+  //Two-Way Binding con ngmodel
+
+busquedaPociones(){
+
+  if(this.textoIngresado == ''){
+
+    this.hpServices.contadorPociones = 1;
+    this.mostrarBoton = true;
+
+    this.imprimirPociones();
+
+  } else {
+
+    this.potions.length = 0;
+
+    this.hpServices.searchPotionsData(this.textoIngresado).subscribe((data: Potion[]) => {
+      this.potions = this.potions.concat(data);
+      
+    }
+    );
+  
+    this.mostrarBoton = false;
+
+  }
+
+ 
+}
 }

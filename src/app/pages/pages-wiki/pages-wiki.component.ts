@@ -27,9 +27,7 @@ export class PagesWikiComponent {
   }
 
   mostrarTextoHechizos() {
-    this.texto = '¡Aprede Los Hechizos!'
-    this.hpResults.imprimirSpells();
-    this.hpResults.mostrarBotonSpells();
+
   }
 
   mostrarTextoObjetos() {
@@ -37,8 +35,6 @@ export class PagesWikiComponent {
   }
 
   mostrarTextoLugares() {
-    this.texto = '¡Conoce las pociones del mundo mágico!'
-    this.hpResults.imprimirPociones();
   }
 
   /**

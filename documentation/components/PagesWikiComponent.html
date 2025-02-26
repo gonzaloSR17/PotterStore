@@ -312,8 +312,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="65"
-                                    class="link-to-prism">src/app/pages/pages-wiki/pages-wiki.component.ts:65</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="61"
+                                    class="link-to-prism">src/app/pages/pages-wiki/pages-wiki.component.ts:61</a></div>
                         </td>
                     </tr>
 
@@ -418,8 +418,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="56"
-                                    class="link-to-prism">src/app/pages/pages-wiki/pages-wiki.component.ts:56</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="52"
+                                    class="link-to-prism">src/app/pages/pages-wiki/pages-wiki.component.ts:52</a></div>
                         </td>
                     </tr>
 
@@ -455,8 +455,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="39"
-                                    class="link-to-prism">src/app/pages/pages-wiki/pages-wiki.component.ts:39</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="37"
+                                    class="link-to-prism">src/app/pages/pages-wiki/pages-wiki.component.ts:37</a></div>
                         </td>
                     </tr>
 
@@ -492,8 +492,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="35"
-                                    class="link-to-prism">src/app/pages/pages-wiki/pages-wiki.component.ts:35</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="33"
+                                    class="link-to-prism">src/app/pages/pages-wiki/pages-wiki.component.ts:33</a></div>
                         </td>
                     </tr>
 
@@ -566,8 +566,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="49"
-                                    class="link-to-prism">src/app/pages/pages-wiki/pages-wiki.component.ts:49</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="45"
+                                    class="link-to-prism">src/app/pages/pages-wiki/pages-wiki.component.ts:45</a></div>
                         </td>
                     </tr>
 
@@ -693,9 +693,7 @@ export class PagesWikiComponent {
   }
 
   mostrarTextoHechizos() {
-    this.texto &#x3D; &#x27;¡Aprede Los Hechizos!&#x27;
-    this.hpResults.imprimirSpells();
-    this.hpResults.mostrarBotonSpells();
+
   }
 
   mostrarTextoObjetos() {
@@ -703,8 +701,6 @@ export class PagesWikiComponent {
   }
 
   mostrarTextoLugares() {
-    this.texto &#x3D; &#x27;¡Conoce las pociones del mundo mágico!&#x27;
-    this.hpResults.imprimirPociones();
   }
 
   /**
@@ -744,139 +740,147 @@ export class PagesWikiComponent {
 
     <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;wikiPortada&quot;&gt;
-    &lt;img class&#x3D;&quot;portada&quot; src&#x3D;&quot;../assets/portadaWiki.png&quot;&gt;
-    &lt;p&gt;&lt;/p&gt;
+  &lt;img class&#x3D;&quot;portada animate-portada&quot; src&#x3D;&quot;../assets/portadaWiki.png&quot;&gt;
+  &lt;p&gt;&lt;/p&gt;
 &lt;/div&gt;
 
-&lt;div class&#x3D;&quot;wikiPortada&quot;&gt;
-    &lt;button [routerLink]&#x3D;&quot;[&#x27;/wiki/book&#x27;]&quot; class&#x3D;&quot;botonPersonaje&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;mostrarTextoLibros()&quot;&gt;
-        &lt;img src&#x3D;&quot;../assets/HP_Libros_Portal.webp&quot;&gt;
-    &lt;/button&gt;
+&lt;!-- Contenedor para organizar los botones --&gt;
+&lt;div class&#x3D;&quot;botones-container&quot;&gt;
+  &lt;button [routerLink]&#x3D;&quot;[&#x27;/wiki/book&#x27;]&quot; class&#x3D;&quot;botonPersonaje&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;mostrarTextoLibros()&quot;&gt;
+      &lt;img src&#x3D;&quot;../assets/HP_Libros_Portal.webp&quot;&gt;
+  &lt;/button&gt;
 
-    &lt;button [routerLink]&#x3D;&quot;[&#x27;/wiki/movies&#x27;]&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;mostrarTextoPeliculas()&quot;&gt;
-        &lt;img src&#x3D;&quot;../assets/HP_Peliculas_Portal.webp&quot;&gt;
-    &lt;/button&gt;
+  &lt;button [routerLink]&#x3D;&quot;[&#x27;/wiki/movies&#x27;]&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;mostrarTextoPeliculas()&quot;&gt;
+      &lt;img src&#x3D;&quot;../assets/HP_Peliculas_Portal.webp&quot;&gt;
+  &lt;/button&gt;
 
-    &lt;button type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;mostrarTextoPersonajes()&quot;&gt;
-        &lt;img src&#x3D;&quot;../assets/HP_Personajes_Portal.webp&quot;&gt;
-    &lt;/button&gt;
+  &lt;button [routerLink]&#x3D;&quot;[&#x27;&#x27;]&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;mostrarTextoPersonajes()&quot;&gt;
+      &lt;img src&#x3D;&quot;../assets/HP_Personajes_Portal.webp&quot;&gt;
+  &lt;/button&gt;
+
+  &lt;button [routerLink]&#x3D;&quot;[&#x27;/wiki/spells&#x27;]&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;mostrarTextoHechizos()&quot;&gt;
+      &lt;img src&#x3D;&quot;../assets/HP_Hechizos_Portal.webp&quot;&gt;
+  &lt;/button&gt;
+
+  &lt;button [routerLink]&#x3D;&quot;[&#x27;/wiki/potions&#x27;]&quot; class&#x3D;&quot;btn_pociones&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;mostrarTextoLugares()&quot;&gt;
+      &lt;img src&#x3D;&quot;../assets/HP_Pociones_Button.png&quot;&gt;
+  &lt;/button&gt;
 &lt;/div&gt;
 
-&lt;div class&#x3D;&quot;wikiPortada&quot;&gt;
-    &lt;button [routerLink]&#x3D;&quot;[&#x27;/wiki/spells&#x27;]&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;mostrarTextoHechizos()&quot;&gt;
-        &lt;img src&#x3D;&quot;../assets/HP_Hechizos_Portal.webp&quot;&gt;
-    &lt;/button&gt;
-
-    &lt;button [routerLink]&#x3D;&quot;[&#x27;/wiki/potions&#x27;]&quot; class&#x3D;&quot;btn_pociones&quot; type&#x3D;&quot;submit&quot; (click)&#x3D;&quot;mostrarTextoLugares()&quot;&gt;
-        &lt;img src&#x3D;&quot;../assets/HP_Pociones_Button.png&quot;&gt;
-    &lt;/button&gt;
-
-&lt;/div&gt;
-
-&lt;div class&#x3D;&quot;wikiPortada&quot;&gt;
-    &lt;p class&#x3D;&quot;letra1&quot;&gt;{{ texto }}&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;div class&#x3D;&quot;wikiPortada&quot;&gt;
-    &lt;input #nombreBusquedaPersonaje type&#x3D;&quot;text&quot; class&#x3D;&quot;cajaBusqueda&quot; placeholder&#x3D;&quot;Buscar...&quot;&gt;
-    &lt;p&gt;&lt;/p&gt;
-    &lt;button class&#x3D;&quot;lupa&quot; (click)&#x3D;&quot;busquedaPersonaje(nombreBusquedaPersonaje.value)&quot;&gt;🔍&lt;/button&gt;
-&lt;/div&gt;
-&lt;!-- 
-
-&lt;div class&#x3D;&quot;wikiPortada&quot;&gt;
-    &lt;app-card-list&gt;&lt;/app-card-list&gt;
-&lt;/div&gt;
-
---&gt;
 
 
 &lt;style&gt;
-/* Estilos generales */
+/* Reducir el tamaño de toda la página al 67% */
+body {
+  zoom: 67%;
+}
+
+/* Contenedor general */
 .wikiPortada {
-  margin: 12px; /* Espacio en blanco en los 4 lados */
+  margin: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap; /* Esto permite que los botones se envuelvan cuando no haya espacio suficiente */
+  flex-wrap: wrap;
 }
 
+@keyframes slideRotate {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) rotate(-10deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateX(10px) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+
+/* Ajuste para la imagen de la portada con animación */
 .portada {
-  margin-top: 60px;
-  max-width: 65%;
+  margin-top: 40px;
+  max-width: 50%;
   height: auto;
   object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  animation: slideRotate 1.5s ease-out;
 }
 
-input {
-  border-radius: 20px; /* Esto redondea los bordes */
-  padding: 10px;
-  border: 1px solid #ffa600; /* Un borde sutil */
+
+/* Contenedor para juntar los botones */
+.botones-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px; /* Reduce el espacio entre botones */
 }
 
-.lupa {
-  margin-left: 2px; /* Agrega espacio al lado derecho */
-  border-radius: 20px; /* Esto redondea los bordes */
-  padding: 10px;
-  border: 1px solid #ffa600; /* Un borde sutil */
+/* Ajuste de los botones */
+.botonPersonaje,
+button {
+  border: none;
+  background-color: transparent;
+  padding: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  opacity: 0;
+  animation: mostrarBotones 1s ease-in-out forwards;
+  min-width: 120px;
+  text-align: center;
 }
 
-/* Estilo de animación para el texto */
+/* Animación para mostrar botones */
+@keyframes mostrarBotones {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Para asegurarnos de que la animación afecta a cada botón con retraso */
+.botones-container button:nth-child(1) { animation-delay: 0.2s; }
+.botones-container button:nth-child(2) { animation-delay: 0.4s; }
+.botones-container button:nth-child(3) { animation-delay: 0.6s; }
+.botones-container button:nth-child(4) { animation-delay: 0.8s; }
+.botones-container button:nth-child(5) { animation-delay: 1s; }
+
+/* Animación del texto */
 .letra1 {
   font-size: 6vw;
-  opacity: 0; /* Comienza invisible */
-  animation: mostrarTexto 3s ease-in-out forwards; /* Animación del texto */
-}
-
-.btn_pociones{
-  
+  opacity: 0;
+  animation: mostrarTexto 3s ease-in-out forwards;
 }
 
 @keyframes mostrarTexto {
-  0% {
-    opacity: 0; /* Al principio, el texto está invisible */
-  }
-  50% {
-    opacity: 0.5; /* La letra se va haciendo visible */
-  }
-  100% {
-    opacity: 1; /* Al final, el texto es completamente visible */
-  }
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
 }
 
-/* Estilo para los botones */
-.botonPersonaje,
-button {
-  border: none; /* Elimina el borde predeterminado del botón */
-  background-color: transparent; /* Fondo transparente */
+/* Caja de búsqueda */
+input {
+  border-radius: 20px;
   padding: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer; /* Cambia el cursor a un puntero cuando pasas el ratón por encima */
-  opacity: 0; /* Comienza invisible */
-  animation: mostrarBotones 1s ease-in-out forwards; /* Animación para mostrar los botones */
+  border: 1px solid #ffa600;
 }
 
-.botonPersonaje:hover,
-button:hover {
-  transform: translateY(-5px) scale(1.1); /* Aumenta el tamaño y mueve el botón hacia arriba */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Añade una sombra suave */
-}
-
-.botonPersonaje img,
-button img {
-  max-width: 100%;
-  height: auto;
-  display: block; /* Hace que la imagen ocupe todo el espacio del botón */
-}
-
-/* Animación para los botones */
-@keyframes mostrarBotones {
-  0% {
-    opacity: 0; /* Comienza invisible */
-  }
-  100% {
-    opacity: 1; /* Los botones se hacen completamente visibles */
-  }
+/* Botón lupa */
+.lupa {
+  margin-left: 2px;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #ffa600;
 }
 &lt;/style&gt;
 </code></pre>
@@ -908,8 +912,8 @@ button img {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="wikiPortada">    <img class="portada" src="../assets/portadaWiki.png">    <p></p></div><div class="wikiPortada">    <button [routerLink]="[\'/wiki/book\']" class="botonPersonaje" type="submit" (click)="mostrarTextoLibros()">        <img src="../assets/HP_Libros_Portal.webp">    </button>    <button [routerLink]="[\'/wiki/movies\']" type="submit" (click)="mostrarTextoPeliculas()">        <img src="../assets/HP_Peliculas_Portal.webp">    </button>    <button type="submit" (click)="mostrarTextoPersonajes()">        <img src="../assets/HP_Personajes_Portal.webp">    </button></div><div class="wikiPortada">    <button [routerLink]="[\'/wiki/spells\']" type="submit" (click)="mostrarTextoHechizos()">        <img src="../assets/HP_Hechizos_Portal.webp">    </button>    <button [routerLink]="[\'/wiki/potions\']" class="btn_pociones" type="submit" (click)="mostrarTextoLugares()">        <img src="../assets/HP_Pociones_Button.png">    </button></div><div class="wikiPortada">    <p class="letra1">{{ texto }}</p></div><div class="wikiPortada">    <input #nombreBusquedaPersonaje type="text" class="cajaBusqueda" placeholder="Buscar...">    <p></p>    <button class="lupa" (click)="busquedaPersonaje(nombreBusquedaPersonaje.value)">🔍</button></div><!-- <div class="wikiPortada">    <app-card-list></app-card-list></div>--><style>/* Estilos generales */.wikiPortada {  margin: 12px; /* Espacio en blanco en los 4 lados */  display: flex;  align-items: center;  justify-content: center;  flex-wrap: wrap; /* Esto permite que los botones se envuelvan cuando no haya espacio suficiente */}.portada {  margin-top: 60px;  max-width: 65%;  height: auto;  object-fit: cover;}input {  border-radius: 20px; /* Esto redondea los bordes */  padding: 10px;  border: 1px solid #ffa600; /* Un borde sutil */}.lupa {  margin-left: 2px; /* Agrega espacio al lado derecho */  border-radius: 20px; /* Esto redondea los bordes */  padding: 10px;  border: 1px solid #ffa600; /* Un borde sutil */}/* Estilo de animación para el texto */.letra1 {  font-size: 6vw;  opacity: 0; /* Comienza invisible */  animation: mostrarTexto 3s ease-in-out forwards; /* Animación del texto */}.btn_pociones{  }@keyframes mostrarTexto {  0% {    opacity: 0; /* Al principio, el texto está invisible */  }  50% {    opacity: 0.5; /* La letra se va haciendo visible */  }  100% {    opacity: 1; /* Al final, el texto es completamente visible */  }}/* Estilo para los botones */.botonPersonaje,button {  border: none; /* Elimina el borde predeterminado del botón */  background-color: transparent; /* Fondo transparente */  padding: 10px;  transition: transform 0.3s ease, box-shadow 0.3s ease;  cursor: pointer; /* Cambia el cursor a un puntero cuando pasas el ratón por encima */  opacity: 0; /* Comienza invisible */  animation: mostrarBotones 1s ease-in-out forwards; /* Animación para mostrar los botones */}.botonPersonaje:hover,button:hover {  transform: translateY(-5px) scale(1.1); /* Aumenta el tamaño y mueve el botón hacia arriba */  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Añade una sombra suave */}.botonPersonaje img,button img {  max-width: 100%;  height: auto;  display: block; /* Hace que la imagen ocupe todo el espacio del botón */}/* Animación para los botones */@keyframes mostrarBotones {  0% {    opacity: 0; /* Comienza invisible */  }  100% {    opacity: 1; /* Los botones se hacen completamente visibles */  }}</style></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
+        var COMPONENT_TEMPLATE = '<div><div class="wikiPortada">  <img class="portada animate-portada" src="../assets/portadaWiki.png">  <p></p></div><!-- Contenedor para organizar los botones --><div class="botones-container">  <button [routerLink]="[\'/wiki/book\']" class="botonPersonaje" type="submit" (click)="mostrarTextoLibros()">      <img src="../assets/HP_Libros_Portal.webp">  </button>  <button [routerLink]="[\'/wiki/movies\']" type="submit" (click)="mostrarTextoPeliculas()">      <img src="../assets/HP_Peliculas_Portal.webp">  </button>  <button [routerLink]="[\'\']" type="submit" (click)="mostrarTextoPersonajes()">      <img src="../assets/HP_Personajes_Portal.webp">  </button>  <button [routerLink]="[\'/wiki/spells\']" type="submit" (click)="mostrarTextoHechizos()">      <img src="../assets/HP_Hechizos_Portal.webp">  </button>  <button [routerLink]="[\'/wiki/potions\']" class="btn_pociones" type="submit" (click)="mostrarTextoLugares()">      <img src="../assets/HP_Pociones_Button.png">  </button></div><style>/* Reducir el tamaño de toda la página al 67% */body {  zoom: 67%;}/* Contenedor general */.wikiPortada {  margin: 12px;  display: flex;  align-items: center;  justify-content: center;  flex-wrap: wrap;}@keyframes slideRotate {  0% {    opacity: 0;    transform: translateX(-100px) rotate(-10deg);  }  50% {    opacity: 0.5;    transform: translateX(10px) rotate(5deg);  }  100% {    opacity: 1;    transform: translateX(0) rotate(0deg);  }}/* Ajuste para la imagen de la portada con animación */.portada {  margin-top: 40px;  max-width: 50%;  height: auto;  object-fit: cover;  display: block;  margin-left: auto;  margin-right: auto;  border-radius: 10px;  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);  animation: slideRotate 1.5s ease-out;}/* Contenedor para juntar los botones */.botones-container {  display: flex;  flex-wrap: wrap;  justify-content: center;  gap: 8px; /* Reduce el espacio entre botones */}/* Ajuste de los botones */.botonPersonaje,button {  border: none;  background-color: transparent;  padding: 8px;  transition: transform 0.3s ease, box-shadow 0.3s ease;  cursor: pointer;  opacity: 0;  animation: mostrarBotones 1s ease-in-out forwards;  min-width: 120px;  text-align: center;}/* Animación para mostrar botones */@keyframes mostrarBotones {  0% {    opacity: 0;    transform: translateY(20px);  }  100% {    opacity: 1;    transform: translateY(0);  }}/* Para asegurarnos de que la animación afecta a cada botón con retraso */.botones-container button:nth-child(1) { animation-delay: 0.2s; }.botones-container button:nth-child(2) { animation-delay: 0.4s; }.botones-container button:nth-child(3) { animation-delay: 0.6s; }.botones-container button:nth-child(4) { animation-delay: 0.8s; }.botones-container button:nth-child(5) { animation-delay: 1s; }/* Animación del texto */.letra1 {  font-size: 6vw;  opacity: 0;  animation: mostrarTexto 3s ease-in-out forwards;}@keyframes mostrarTexto {  0% { opacity: 0; }  50% { opacity: 0.5; }  100% { opacity: 1; }}/* Caja de búsqueda */input {  border-radius: 20px;  padding: 10px;  border: 1px solid #ffa600;}/* Botón lupa */.lupa {  margin-left: 2px;  border-radius: 20px;  padding: 10px;  border: 1px solid #ffa600;}</style></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormLogginComponent', 'selector': 'app-form-loggin'},{'name': 'FormPedidoComponent', 'selector': 'app-form-pedido'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'ListPedidoComponent', 'selector': 'app-list-pedido'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'PagesWikiComponent'};
 </script>

@@ -13,3 +13,18 @@ p{
     font-weight: bold;
 }
 
+body {
+    background-color: #f4f4f4; /* Un gris claro */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.offcanvas {
+    visibility: hidden;
+    position: fixed !important;
+    height: auto !important;
+  }
+  
+  .offcanvas.show {
+    visibility: visible;
+  }

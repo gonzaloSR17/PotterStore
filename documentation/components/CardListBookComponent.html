@@ -120,18 +120,14 @@
 </p>
 
 
+
+
     <p class="comment">
-        <h3>Description</h3>
+        <h3>Implements</h3>
     </p>
     <p class="comment">
-        <p>Componente que muestra la lista de libros disponibles.</p>
-<ul>
-<li>@author Gonzalo Sánchez-Ros Paz</li>
-</ul>
-
+                <code>OnInit</code>
     </p>
-
-
 
 
 <section data-compodoc="block-metadata">
@@ -184,6 +180,28 @@
     <h3 id="index">Index</h3>
     <table class="table table-sm table-bordered index-table">
         <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#iduser" >iduser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#libroSeleccionado" >libroSeleccionado</a>
+                            </li>
+                            <li>
+                                <a href="#usuarioActual" >usuarioActual</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
                 <tr>
                     <td class="col-md-4">
@@ -193,6 +211,15 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
+                            <li>
+                                <a href="#agregarAlCarrito" >agregarAlCarrito</a>
+                            </li>
+                            <li>
+                                <a href="#anadirCarrito" >anadirCarrito</a>
+                            </li>
+                            <li>
+                                <a href="#detallesLibro" >detallesLibro</a>
+                            </li>
                             <li>
                                 <a href="#imprimirLibros" >imprimirLibros</a>
                             </li>
@@ -231,12 +258,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(hpServices: <a href="../injectables/HarryPotterServices.html" target="_self">HarryPotterServices</a>)</code>
+<code>constructor(hpServices: <a href="../injectables/HarryPotterServices.html" target="_self">HarryPotterServices</a>, userServices: <a href="../injectables/UserServiceService.html" target="_self">UserServiceService</a>, userSession: <a href="../injectables/UserSessionService.html" target="_self">UserSessionService</a>, bookService: <a href="../injectables/BookServicesService.html" target="_self">BookServicesService</a>, cartServive: <a href="../injectables/CartService.html" target="_self">CartService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:25</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:39</a></div>
                             </td>
                         </tr>
 
@@ -258,6 +285,54 @@
                                                   
                                                         <td>
                                                                         <code><a href="../injectables/HarryPotterServices.html" target="_self" >HarryPotterServices</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userServices</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserServiceService.html" target="_self" >UserServiceService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>userSession</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UserSessionService.html" target="_self" >UserSessionService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>bookService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BookServicesService.html" target="_self" >BookServicesService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>cartServive</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/CartService.html" target="_self" >CartService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -297,7 +372,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="25" class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:25</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:39</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -321,6 +396,207 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="agregarAlCarrito"></a>
+                    <span class="name">
+                        <span ><b>agregarAlCarrito</b></span>
+                        <a href="#agregarAlCarrito"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>agregarAlCarrito(libro: <a href="../interfaces/libros.html" target="_self">libros</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="101"
+                                    class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:101</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>libro</td>
+                                            <td>
+                                                            <code><a href="../interfaces/libros.html" target="_self" >libros</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="anadirCarrito"></a>
+                    <span class="name">
+                        <span ><b>anadirCarrito</b></span>
+                        <a href="#anadirCarrito"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>anadirCarrito(libro: <a href="../interfaces/libros.html" target="_self">libros</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="118"
+                                    class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:118</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>libro</td>
+                                            <td>
+                                                            <code><a href="../interfaces/libros.html" target="_self" >libros</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="detallesLibro"></a>
+                    <span class="name">
+                        <span ><b>detallesLibro</b></span>
+                        <a href="#detallesLibro"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>detallesLibro(libro: <a href="../interfaces/libros.html" target="_self">libros</a>)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Defined in <a href="" data-line="92"
+                                    class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:92</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                            <div class="io-description">
+                                <b>Parameters :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Name</td>
+                                                <td>Type</td>
+                                            <td>Optional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>libro</td>
+                                            <td>
+                                                            <code><a href="../interfaces/libros.html" target="_self" >libros</a></code>
+                                            </td>
+
+                                            <td>
+                                                    No
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="imprimirLibros"></a>
                     <span class="name">
                         <span ><b>imprimirLibros</b></span>
@@ -337,8 +613,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="38"
-                                    class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:38</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="81"
+                                    class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:81</a></div>
                         </td>
                     </tr>
 
@@ -376,8 +652,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Defined in <a href="" data-line="31"
-                                    class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:31</a></div>
+                            <div class="io-line">Defined in <a href="" data-line="57"
+                                    class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:57</a></div>
                         </td>
                     </tr>
 
@@ -396,23 +672,133 @@
         </tbody>
     </table>
 </section>
+    <section data-compodoc="block-properties">
+    
+    <h3 id="inputs">
+        Properties
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="iduser"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>iduser</b></span>
+                        <a href="#iduser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>0</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="53" class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:53</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="libroSeleccionado"></a>
+                    <span class="name">
+                            <span class="modifier">Public</span>
+                        <span ><b>libroSeleccionado</b></span>
+                        <a href="#libroSeleccionado"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/libros.html" target="_self" >libros | null</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:51</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="usuarioActual"></a>
+                    <span class="name">
+                        <span ><b>usuarioActual</b></span>
+                        <a href="#usuarioActual"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="../interfaces/usuario.html" target="_self" >usuario | null</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>null</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/component/card-list-book/card-list-book.component.ts:33</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+</section>
 
 </div>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, Input, OnInit } from &#x27;@angular/core&#x27;;
 import { libros } from &#x27;../../interfaces/harrypotter/libros.interface&#x27;;
 import { HarryPotterServices } from &#x27;../../services/harrypotterServices/harrypotter.services&#x27;;
+import { UserServiceService } from &#x27;../../services/user-service.service&#x27;;
 import { PagesWikiComponent } from &#x27;../../pages/pages-wiki/pages-wiki.component&#x27;;
 import { NavbarComponent } from &#x27;../../shared/components/navbar/navbar.component&#x27;;
 import { SidebarMenuComponent } from &#x27;../../shared/components/sidebars/sidebar-menu/sidebar-menu.component&#x27;;
 import { SidebarCarritoComponent } from &#x27;../../shared/components/sidebars/sidebar-carrito/sidebar-carrito.component&#x27;;
- 
+ import { UserSessionService } from &#x27;../../services/usuNow/usu-now.service&#x27;;
+
+ import { IBook } from &#x27;../../interfaces/usuario/libro.interface&#x27;;
+ import { usuario } from &#x27;../../interfaces/usuario/usuario.interface&#x27;;
+import { response } from &#x27;express&#x27;;
+import { BookServicesService, Libro } from &#x27;../../services/book-services.service&#x27;;
+import { CartService } from &#x27;../../services/cart/cart-service.service&#x27;;
 /**
  * Componente que muestra la lista de libros disponibles.
  * * @author Gonzalo Sánchez-Ros Paz
  */
+
+declare var bootstrap: any;
 
 @Component({
   selector: &#x27;app-card-list-book&#x27;,
@@ -421,19 +807,53 @@ import { SidebarCarritoComponent } from &#x27;../../shared/components/sidebars/s
   templateUrl: &#x27;./card-list-book.component.html&#x27;,
   styleUrl: &#x27;./card-list-book.component.css&#x27;
 })
-export class CardListBookComponent {
+export class CardListBookComponent implements OnInit {
+
+  // creamos objeto de usuario vacio
+    usuarioActual: usuario | null &#x3D; null;
+
+    
 
     /** Lista de libros obtenidos de la API */
   @Input()
   public resBook: libros[] &#x3D; [];
 
-  constructor (private hpServices: HarryPotterServices){}
+  constructor (private hpServices: HarryPotterServices,
+    private userServices: UserServiceService,
+    private userSession: UserSessionService,
+    private bookService: BookServicesService,
+    private cartServive: CartService
+  ){}
 
+
+  // objeto para seleccionar
+
+  public libroSeleccionado: libros | null &#x3D; null;
+
+  public iduser: number &#x3D; 0;
+  
 
   /**  Metodo que se ejcuta automaticamente */
   ngOnInit(): void{
 
     this.imprimirLibros();
+
+    this.userSession.getUsuario().subscribe(usuario &#x3D;&gt; {
+      this.usuarioActual &#x3D; usuario;
+      
+      // obtenemos su id 
+
+      if (this.usuarioActual?.gmail) {
+
+        this.userServices.getIdUser(this.usuarioActual?.gmail).subscribe(id &#x3D;&gt; {
+          console.log(&quot;ID del usuario:&quot;, id);
+          this.iduser &#x3D; id;
+        });
+
+      }
+
+      
+    });
 
   }
 
@@ -449,39 +869,132 @@ export class CardListBookComponent {
   
   }
 
-}
+  detallesLibro(libro: libros): void {
+
+    this.libroSeleccionado &#x3D; libro;
+    const modal &#x3D; new bootstrap.Modal(document.getElementById(&#x27;detalleLibroModal&#x27;)!);
+    modal.show();
+
+    
+  }
+
+  agregarAlCarrito(libro: libros) {
+
+    const libroAnadir: IBook &#x3D; {
+      title: libro.title,
+      price: 20,
+      imagenUrl: libro.cover
+    }
+
+    this.cartServive.agregarLibro(libroAnadir);
+
+    const modalElement &#x3D; document.getElementById(&#x27;detalleLibroModal&#x27;);
+    if (modalElement) {
+      const modal &#x3D; bootstrap.Modal.getInstance(modalElement);
+      modal?.hide(); // Cierra el modal si está abierto
+    }
+  }
+
+  anadirCarrito(libro: libros): void {
+    if (!this.iduser) {
+      console.error(&#x27;Error: No se pudo obtener el ID del usuario.&#x27;);
+      alert(&#x27;No se pudo identificar al usuario. Intenta nuevamente.&#x27;);
+      return;
+    }
+  
+    // Convertir &#x60;libros&#x60; a &#x60;Libro&#x60;
+    const libroParaEnviar: Libro &#x3D; {
+      id: 0, // Se usa 0 porque &#x60;libros&#x60; no tiene &#x60;id&#x60;
+      title: libro.title,
+      pages: Number(libro.pages) || 0, // Convertir &#x60;pages&#x60; de &#x60;string&#x60; a &#x60;number&#x60;
+      price: libro.price ?? 20, // Si no tiene precio, asignar 20 por defecto
+      imagenUrl: libro.cover ?? &#x27;&#x27;, // &#x60;cover&#x60; en &#x60;libros&#x60; equivale a &#x60;imagenUrl&#x60; en &#x60;Libro&#x60;
+      userId: this.iduser // Asignar el ID del usuario actual
+    };
+  
+    // Llamamos al servicio para agregar el libro
+    this.bookService.addLibroUser(libroParaEnviar).subscribe({
+      next: (response) &#x3D;&gt; {
+        console.log(&#x27;Libro agregado al carrito con éxito:&#x27;, response);
+        alert(&#x27;Libro agregado al carrito correctamente&#x27;); // Mensaje de éxito
+      },
+      error: (error) &#x3D;&gt; {
+        console.error(&#x27;Error al agregar el libro:&#x27;, error);
+        alert(&#x27;Hubo un error al agregar el libro al carrito. Inténtalo de nuevo.&#x27;);
+      }
+    });
+  }
+  }
+
+
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;app-navbar&gt;&lt;/app-navbar&gt;  
-&lt;app-pages-wiki&gt;&lt;/app-pages-wiki&gt; 
+&lt;app-pages-wiki&gt;&lt;/app-pages-wiki&gt;  
 
+&lt;!-- Barra de búsqueda --&gt;
+&lt;div class&#x3D;&quot;container text-center mt-3&quot;&gt;
+  &lt;input #nombreBusquedaPersonaje type&#x3D;&quot;text&quot; class&#x3D;&quot;cajaBusqueda&quot; placeholder&#x3D;&quot;Buscar...&quot;&gt;
+  &lt;button class&#x3D;&quot;lupa&quot;&gt;🔍&lt;/button&gt;
+&lt;/div&gt;
 
-&lt;!--Para imprimir libros--&gt; 
-
-&lt;div class&#x3D;&quot;d-flex justify-content-center mt-4&quot;&gt;
-
-  &lt;div class&#x3D;&quot;card mb-3&quot; style&#x3D;&quot;max-width: 540px;&quot;&gt;
-    &lt;div *ngFor&#x3D;&quot;let Libros of resBook&quot; class&#x3D;&quot;row no-gutters&quot;&gt;
-      &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
-        &lt;img [src]&#x3D;&quot;Libros.cover&quot; class&#x3D;&quot;card-img&quot; alt&#x3D;&quot;...&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;col-md-8&quot;&gt;
+&lt;!-- Contenedor de libros --&gt;
+&lt;div class&#x3D;&quot;container mt-4&quot;&gt;
+  &lt;div class&#x3D;&quot;row justify-content-center&quot;&gt;
+    &lt;div *ngFor&#x3D;&quot;let Libros of resBook&quot; class&#x3D;&quot;col-12 col-md-4 col-lg-2 mb-3&quot;&gt;
+      &lt;div class&#x3D;&quot;card book-card&quot;&gt;
+        &lt;img [src]&#x3D;&quot;Libros.cover&quot; class&#x3D;&quot;card-img-top&quot; alt&#x3D;&quot;Portada del libro&quot;&gt;
         &lt;div class&#x3D;&quot;card-body&quot;&gt;
-          &lt;h5 class&#x3D;&quot;card-title&quot;&gt;{{Libros.title}}&lt;/h5&gt;
-          &lt;p class&#x3D;&quot;card-text&quot;&gt;{{Libros.summary}}&lt;/p&gt;
-          &lt;p class&#x3D;&quot;card-text&quot;&gt; &lt;small class&#x3D;&quot;text-muted&quot;&gt;Numbers Pages: {{Libros.pages}} - {{Libros.author}} - {{Libros.release_date}} &lt;/small&gt;&lt;/p&gt;
+          &lt;h6 class&#x3D;&quot;card-title&quot;&gt;{{ Libros.title }}&lt;/h6&gt;
+          &lt;p class&#x3D;&quot;card-text&quot;&gt;{{ Libros.summary | slice:0:80 }}...&lt;/p&gt;
+          &lt;p class&#x3D;&quot;card-text&quot;&gt;
+            &lt;small class&#x3D;&quot;text-muted&quot;&gt;Páginas: {{ Libros.pages }}&lt;/small&gt;
+          &lt;/p&gt;
+          &lt;button (click)&#x3D;&quot;detallesLibro(Libros)&quot; class&#x3D;&quot;btn btn-primary btn-sm&quot;&gt;Ver detalles&lt;/button&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  
-
 &lt;/div&gt;
 
-  &lt;app-sidebar-menu&gt;&lt;/app-sidebar-menu&gt;
-  &lt;app-sidebar-carrito&gt;&lt;/app-sidebar-carrito&gt;</code></pre>
+&lt;!-- Modal para mostrar detalles del libro --&gt;
+&lt;div class&#x3D;&quot;modal fade&quot; id&#x3D;&quot;detalleLibroModal&quot; tabindex&#x3D;&quot;-1&quot; aria-labelledby&#x3D;&quot;detalleLibroLabel&quot; aria-hidden&#x3D;&quot;true&quot;&gt;
+  &lt;div class&#x3D;&quot;modal-dialog modal-lg&quot;&gt;
+    &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+      &lt;div class&#x3D;&quot;modal-header&quot;&gt;
+        &lt;h5 class&#x3D;&quot;modal-title&quot; id&#x3D;&quot;detalleLibroLabel&quot;&gt;{{ libroSeleccionado?.title }}&lt;/h5&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn-close&quot; data-bs-dismiss&#x3D;&quot;modal&quot; aria-label&#x3D;&quot;Close&quot;&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;modal-body&quot;&gt;
+        &lt;div class&#x3D;&quot;row&quot;&gt;
+          &lt;!-- Imagen a la izquierda --&gt;
+          &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;img [src]&#x3D;&quot;libroSeleccionado?.cover&quot; class&#x3D;&quot;img-fluid rounded shadow&quot; alt&#x3D;&quot;Portada del libro&quot;&gt;
+          &lt;/div&gt;
+          &lt;!-- Texto a la derecha --&gt;
+          &lt;div class&#x3D;&quot;col-md-8&quot;&gt;
+            &lt;p&gt;&lt;strong&gt;Sinopsis:&lt;/strong&gt;&lt;/p&gt;
+            &lt;p&gt;{{ libroSeleccionado?.summary }}&lt;/p&gt;
+            &lt;p&gt;&lt;strong&gt;Páginas:&lt;/strong&gt; {{ libroSeleccionado?.pages }}&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;modal-footer&quot;&gt;
+        &lt;!-- Botón rojo &quot;Añadir al carrito&quot; con la función asignada --&gt;
+        &lt;button class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&quot;agregarAlCarrito(libroSeleccionado!)&quot;&gt;
+          🛒 Añadir al carrito
+        &lt;/button&gt;
+        &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn btn-secondary&quot; data-bs-dismiss&#x3D;&quot;modal&quot;&gt;Cerrar&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;app-sidebar-menu&gt;&lt;/app-sidebar-menu&gt;
+&lt;app-sidebar-carrito&gt;&lt;/app-sidebar-carrito&gt;
+</code></pre>
     </div>
 
 
@@ -510,8 +1023,8 @@ export class CardListBookComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><app-navbar></app-navbar>  <app-pages-wiki></app-pages-wiki> <!--Para imprimir libros--> <div class="d-flex justify-content-center mt-4">  <div class="card mb-3" style="max-width: 540px;">    <div *ngFor="let Libros of resBook" class="row no-gutters">      <div class="col-md-4">        <img [src]="Libros.cover" class="card-img" alt="...">      </div>      <div class="col-md-8">        <div class="card-body">          <h5 class="card-title">{{Libros.title}}</h5>          <p class="card-text">{{Libros.summary}}</p>          <p class="card-text"> <small class="text-muted">Numbers Pages: {{Libros.pages}} - {{Libros.author}} - {{Libros.release_date}} </small></p>        </div>      </div>    </div>  </div>  </div>  <app-sidebar-menu></app-sidebar-menu>  <app-sidebar-carrito></app-sidebar-carrito></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
+        var COMPONENT_TEMPLATE = '<div><app-navbar></app-navbar>  <app-pages-wiki></app-pages-wiki>  <!-- Barra de búsqueda --><div class="container text-center mt-3">  <input #nombreBusquedaPersonaje type="text" class="cajaBusqueda" placeholder="Buscar...">  <button class="lupa">🔍</button></div><!-- Contenedor de libros --><div class="container mt-4">  <div class="row justify-content-center">    <div *ngFor="let Libros of resBook" class="col-12 col-md-4 col-lg-2 mb-3">      <div class="card book-card">        <img [src]="Libros.cover" class="card-img-top" alt="Portada del libro">        <div class="card-body">          <h6 class="card-title">{{ Libros.title }}</h6>          <p class="card-text">{{ Libros.summary | slice:0:80 }}...</p>          <p class="card-text">            <small class="text-muted">Páginas: {{ Libros.pages }}</small>          </p>          <button (click)="detallesLibro(Libros)" class="btn btn-primary btn-sm">Ver detalles</button>        </div>      </div>    </div>  </div></div><!-- Modal para mostrar detalles del libro --><div class="modal fade" id="detalleLibroModal" tabindex="-1" aria-labelledby="detalleLibroLabel" aria-hidden="true">  <div class="modal-dialog modal-lg">    <div class="modal-content">      <div class="modal-header">        <h5 class="modal-title" id="detalleLibroLabel">{{ libroSeleccionado?.title }}</h5>        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>      </div>      <div class="modal-body">        <div class="row">          <!-- Imagen a la izquierda -->          <div class="col-md-4">            <img [src]="libroSeleccionado?.cover" class="img-fluid rounded shadow" alt="Portada del libro">          </div>          <!-- Texto a la derecha -->          <div class="col-md-8">            <p><strong>Sinopsis:</strong></p>            <p>{{ libroSeleccionado?.summary }}</p>            <p><strong>Páginas:</strong> {{ libroSeleccionado?.pages }}</p>          </div>        </div>      </div>      <div class="modal-footer">        <!-- Botón rojo "Añadir al carrito" con la función asignada -->        <button class="btn btn-danger" (click)="agregarAlCarrito(libroSeleccionado!)">          🛒 Añadir al carrito        </button>        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>      </div>    </div>  </div></div><app-sidebar-menu></app-sidebar-menu><app-sidebar-carrito></app-sidebar-carrito></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormLogginComponent', 'selector': 'app-form-loggin'},{'name': 'FormPedidoComponent', 'selector': 'app-form-pedido'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'ListPedidoComponent', 'selector': 'app-list-pedido'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'CardListBookComponent'};
 </script>

@@ -1,0 +1,31 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .book-image {
+    width: 50px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .book-info {
+    flex-grow: 1;
+  }
+  
+  .cart-footer {
+    text-align: center;
+  }
+
+  .movie-image {
+    max-width: 25%; /* Evita que la imagen se desborde horizontalmente */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacios extra alrededor */
+    margin: 0 auto; /* Centra la imagen dentro del contenedor */
+    border-radius: 10px; /* Opcional: esquinas redondeadas */
+  }
+  

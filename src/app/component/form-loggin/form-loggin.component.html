@@ -1,0 +1,39 @@
+
+
+<div class="page-container">
+    <div class="main-container">
+        <!-- Título grande arriba -->
+        <h1 class="title">Iniciar Sesión</h1>
+
+        <!-- Formulario con animación -->
+        <form (ngSubmit)="loggin()" [formGroup]="formUserLoggin" class="form-container animate-form">
+            <div class="mb-3">
+                <label class="form-label">Introduce tu gmail</label>
+                <input [(ngModel)]="usuLog.gmail" type="text" formControlName="gmail" class="form-control">
+
+                <!-- Validación del usuario -->
+                <div class="alert alert-danger" 
+                     [hidden]="formUserLoggin.get('gmail')?.valid || formUserLoggin.get('gmail')?.pristine">
+                    <span *ngIf="formUserLoggin.get('gmail')?.errors?.['minlength']">
+                        El Usuario debe tener al menos 6 caracteres
+                    </span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Introduce tu contraseña</label>
+                <input [(ngModel)]="usuLog.contrasenia" type="password" formControlName="contrasenia" class="form-control">
+
+                <!-- Validación de la contraseña -->
+                <div class="alert alert-danger"
+                     [hidden]="formUserLoggin.get('contrasenia')?.valid || formUserLoggin.get('contrasenia')?.pristine">
+                    La contraseña necesita mínimo de 3 caracteres
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="formUserLoggin.invalid">Iniciar Sesión</button>
+            <button type="button" class="btn btn-success" [routerLink]="['/register']">Registrar</button>
+        </form>
+    </div>
+</div>
+
+

@@ -5,13 +5,16 @@ import { NavbarComponent } from "./components/navbar/navbar.component";
 import { SidebarCarritoComponent } from './components/sidebars/sidebar-carrito/sidebar-carrito.component';
 import { SidebarMenuComponent } from './components/sidebars/sidebar-menu/sidebar-menu.component';
 import { RouterModule } from "@angular/router";
+import { FooterComponent } from './components/footer/footer.component';
+
 
 @NgModule({
     declarations: [
       // Declara el componente
       NavbarComponent,
       SidebarCarritoComponent,
-      SidebarMenuComponent
+      SidebarMenuComponent,
+      FooterComponent
     ],
     imports: [
       CommonModule,
@@ -22,6 +25,7 @@ import { RouterModule } from "@angular/router";
       // Exporta el componente
       NavbarComponent,
       SidebarMenuComponent,
+      FooterComponent,
       SidebarCarritoComponent
     ]
   })

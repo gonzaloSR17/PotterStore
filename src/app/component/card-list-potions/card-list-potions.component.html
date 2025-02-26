@@ -1,11 +1,21 @@
 <app-navbar></app-navbar>  
-<app-pages-wiki></app-pages-wiki> 
+<app-pages-wiki></app-pages-wiki>
+
+<div class="wikiPortada">
+  <p class="letra1">¡Aprende todas las pociones!</p>
+</div>
+
+<div class="wikiPortada">
+  <input type="text" [(ngModel)]="textoIngresado" class="cajaBusqueda" placeholder="Buscar...">
+  <p></p>
+  <button (click)="busquedaPociones()" class="lupa">🔍</button>
+</div>
 
 <!-- Parte para imprimir las pociones -->
 <div class="d-flex justify-content-center mt-4">
   <div class="container mt-4">
     <div class="row g-4">
-      <div class="col-md-3" *ngFor="let potion of potions">
+      <div class="col-md-2 col-sm-4" *ngFor="let potion of potions">
         <div class="card card-hover h-100" style="width: 100%;"> 
           <img [src]="potion.attributes.image" class="card-img-top img-fluid" (error)="setDefaultImage($event)">
           <div class="card-body">
@@ -29,7 +39,7 @@
     <!-- Botones centrados al final del contenedor -->
     <div class="row">
       <div class="col-12 text-center mt-4">
-        <button type="button" class="btn btn-danger" (click)="imprimirPociones()">Mostrar más Pociones ⚗️</button>
+        <button  *ngIf="mostrarBoton" type="button" class="btn btn-danger" (click)="imprimirPociones()">Mostrar más Pociones ⚗️</button>
       </div>
     </div>
   </div>

@@ -261,8 +261,13 @@ export class AppComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;router-outlet&gt;&lt;/router-outlet&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;app-navbar&gt;&lt;/app-navbar&gt;
+&lt;router-outlet&gt;&lt;/router-outlet&gt; &lt;!--Donde se cargara cada componente--&gt;
 
+&lt;!-- Sidebars FUERA del flujo principal --&gt;
+&lt;app-sidebar-menu&gt;&lt;/app-sidebar-menu&gt;
+&lt;app-sidebar-carrito&gt;&lt;/app-sidebar-carrito&gt;
+&lt;app-footer&gt;&lt;/app-footer&gt;
 </code></pre>
     </div>
 
@@ -292,8 +297,8 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><router-outlet></router-outlet></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
+        var COMPONENT_TEMPLATE = '<div><app-navbar></app-navbar><router-outlet></router-outlet> <!--Donde se cargara cada componente--><!-- Sidebars FUERA del flujo principal --><app-sidebar-menu></app-sidebar-menu><app-sidebar-carrito></app-sidebar-carrito><app-footer></app-footer></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormLogginComponent', 'selector': 'app-form-loggin'},{'name': 'FormPedidoComponent', 'selector': 'app-form-pedido'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'ListPedidoComponent', 'selector': 'app-list-pedido'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

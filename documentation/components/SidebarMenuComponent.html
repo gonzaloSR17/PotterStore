@@ -199,55 +199,53 @@ export class SidebarMenuComponent {
     </div>
 
     <div class="tab-pane fade " id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;offcanvas offcanvas-start&quot; data-bs-backdrop&#x3D;&quot;static&quot; tabindex&#x3D;&quot;-1&quot; id&#x3D;&quot;staticBackdrop&quot; aria-labelledby&#x3D;&quot;staticBackdropLabel&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">
+
+&lt;div class&#x3D;&quot;offcanvas offcanvas-start&quot; data-bs-backdrop&#x3D;&quot;static&quot; tabindex&#x3D;&quot;-1&quot; id&#x3D;&quot;staticBackdrop&quot; aria-labelledby&#x3D;&quot;staticBackdropLabel&quot;&gt;
   &lt;div class&#x3D;&quot;offcanvas-header&quot;&gt;
     &lt;h6 class&#x3D;&quot;offcanvas-title d-none d-sm-block&quot; id&#x3D;&quot;offcanvas&quot;&gt;Menu&lt;/h6&gt;
     &lt;button type&#x3D;&quot;button&quot; class&#x3D;&quot;btn-close text-reset&quot; data-bs-dismiss&#x3D;&quot;offcanvas&quot; aria-label&#x3D;&quot;Close&quot;&gt;&lt;/button&gt;
-&lt;/div&gt;
-&lt;div class&#x3D;&quot;offcanvas-body px-0&quot;&gt;
-    &lt;ul class&#x3D;&quot;nav nav-pills flex-column mb-sm-auto mb-0 align-items-start&quot; id&#x3D;&quot;menu&quot;&gt;
-        &lt;li class&#x3D;&quot;nav-item&quot;&gt;
-            &lt;a class&#x3D;&quot;nav-link text-truncate&quot;&gt;
-                &lt;i class&#x3D;&quot;fs-5 bi-house&quot;&gt;&lt;/i&gt;
-                &lt;span class&#x3D;&quot;ms-1 d-none d-sm-inline&quot; style&#x3D;&quot;cursor: pointer;&quot; [routerLink]&#x3D;&quot;[&#x27;/register&#x27;]&quot;&gt;👤 Iniciar Sesión&lt;/span&gt;
-            &lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li class&#x3D;&quot;dropdown&quot;&gt;
-          &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nav-link dropdown-toggle  text-truncate&quot; id&#x3D;&quot;dropdown&quot; data-bs-toggle&#x3D;&quot;dropdown&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
-              &lt;i class&#x3D;&quot;fs-5 bi-bootstrap&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;ms-1 d-none d-sm-inline&quot;&gt;🔍 Wiki&lt;/span&gt;
-          &lt;/a&gt;
-          &lt;ul class&#x3D;&quot;dropdown-menu text-small shadow&quot; aria-labelledby&#x3D;&quot;dropdown&quot;&gt;
-              &lt;li&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Personajes&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Películas&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Libros&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Pociones&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;
-                  &lt;hr class&#x3D;&quot;dropdown-divider&quot;&gt;
-              &lt;/li&gt;
-              &lt;li&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; href&#x3D;&quot;#&quot;&gt;Sign out&lt;/a&gt;&lt;/li&gt;
-          &lt;/ul&gt;
+  &lt;/div&gt;
+
+  &lt;div class&#x3D;&quot;offcanvas-body px-0&quot;&gt;
+    &lt;ul class&#x3D;&quot;nav nav-pills flex-column mb-sm-auto mb-0 align-items-start w-100&quot; id&#x3D;&quot;menu&quot;&gt;
+      
+  
+      &lt;li class&#x3D;&quot;nav-item&quot;&gt;
+        &lt;a class&#x3D;&quot;nav-link text-truncate&quot; [routerLink]&#x3D;&quot;[&#x27;/loggin&#x27;]&quot; routerLinkActive&#x3D;&quot;active&quot; data-bs-dismiss&#x3D;&quot;offcanvas&quot;&gt;
+          &lt;i class&#x3D;&quot;fs-5 bi-house&quot;&gt;&lt;/i&gt; 
+          &lt;span class&#x3D;&quot;ms-1 d-none d-sm-inline&quot;&gt;👤 Iniciar Sesión&lt;/span&gt;
+        &lt;/a&gt;
       &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nav-link text-truncate&quot;&gt;
-                &lt;i class&#x3D;&quot;fs-5 bi-grid&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;ms-1 d-none d-sm-inline&quot;&gt;🪄 Blog Mágico&lt;/span&gt;&lt;/a&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;a href&#x3D;&quot;#&quot; class&#x3D;&quot;nav-link text-truncate&quot;&gt;
-                &lt;i class&#x3D;&quot;fs-5 bi-people&quot;&gt;&lt;/i&gt;&lt;span class&#x3D;&quot;ms-1 d-none d-sm-inline&quot;&gt;🚂 Viaja a Hogwarts&lt;/span&gt; &lt;/a&gt;
-        &lt;/li&gt;
+
+      &lt;li class&#x3D;&quot;dropdown&quot;&gt;
+        &lt;a class&#x3D;&quot;nav-link dropdown-toggle text-truncate&quot; id&#x3D;&quot;dropdown&quot; data-bs-toggle&#x3D;&quot;dropdown&quot; aria-expanded&#x3D;&quot;false&quot;&gt;
+          &lt;i class&#x3D;&quot;fs-5 bi-bootstrap&quot;&gt;&lt;/i&gt;
+          &lt;span class&#x3D;&quot;ms-1 d-none d-sm-inline&quot;&gt;🔍 Wiki&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;ul class&#x3D;&quot;dropdown-menu text-small shadow&quot; aria-labelledby&#x3D;&quot;dropdown&quot;&gt;
+          &lt;li&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; [routerLink]&#x3D;&quot;[&#x27;/&#x27;]&quot; data-bs-dismiss&#x3D;&quot;offcanvas&quot;&gt;Personajes&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; [routerLink]&#x3D;&quot;[&#x27;/wiki/movies&#x27;]&quot; data-bs-dismiss&#x3D;&quot;offcanvas&quot;&gt;Películas&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; [routerLink]&#x3D;&quot;[&#x27;/wiki/book&#x27;]&quot; data-bs-dismiss&#x3D;&quot;offcanvas&quot;&gt;Libros&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; [routerLink]&#x3D;&quot;[&#x27;/wiki/potions&#x27;]&quot; data-bs-dismiss&#x3D;&quot;offcanvas&quot;&gt;Pociones&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a class&#x3D;&quot;dropdown-item&quot; [routerLink]&#x3D;&quot;[&#x27;/wiki/spells&#x27;]&quot; data-bs-dismiss&#x3D;&quot;offcanvas&quot;&gt;Hechizos&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+
+      &lt;li&gt;
+        &lt;a class&#x3D;&quot;nav-link text-truncate&quot; [routerLink]&#x3D;&quot;[&#x27;/list/pedidos&#x27;]&quot; routerLinkActive&#x3D;&quot;active&quot; data-bs-dismiss&#x3D;&quot;offcanvas&quot;&gt;
+          &lt;i class&#x3D;&quot;fs-5 bi-people&quot;&gt;&lt;/i&gt;
+          &lt;span class&#x3D;&quot;ms-1 d-none d-sm-inline&quot;&gt;🚂 Tus Pedidos&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+
     &lt;/ul&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class&#x3D;&quot;container-fluid&quot;&gt;
-&lt;div class&#x3D;&quot;row&quot;&gt;
-    &lt;div class&#x3D;&quot;col min-vh-100 py-3&quot;&gt;
-        &lt;!-- toggler --&gt;
-        &lt;button class&#x3D;&quot;btn float-end&quot; data-bs-toggle&#x3D;&quot;offcanvas&quot; data-bs-target&#x3D;&quot;#offcanvas&quot; role&#x3D;&quot;button&quot;&gt;
-            &lt;i class&#x3D;&quot;bi bi-arrow-right-square-fill fs-3&quot; data-bs-toggle&#x3D;&quot;offcanvas&quot; data-bs-target&#x3D;&quot;#offcanvas&quot;&gt;&lt;/i&gt;
-        &lt;/button&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+
+&lt;link href&#x3D;&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css&quot; rel&#x3D;&quot;stylesheet&quot;&gt;
+&lt;script src&#x3D;&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
     </div>
 
 
@@ -276,8 +274,8 @@ export class SidebarMenuComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">  <div class="offcanvas-header">    <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button></div><div class="offcanvas-body px-0">    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">        <li class="nav-item">            <a class="nav-link text-truncate">                <i class="fs-5 bi-house"></i>                <span class="ms-1 d-none d-sm-inline" style="cursor: pointer;" [routerLink]="[\'/register\']">👤 Iniciar Sesión</span>            </a>        </li>        <li class="dropdown">          <a href="#" class="nav-link dropdown-toggle  text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">              <i class="fs-5 bi-bootstrap"></i><span class="ms-1 d-none d-sm-inline">🔍 Wiki</span>          </a>          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">              <li><a class="dropdown-item" href="#">Personajes</a></li>              <li><a class="dropdown-item" href="#">Películas</a></li>              <li><a class="dropdown-item" href="#">Libros</a></li>              <li><a class="dropdown-item" href="#">Pociones</a></li>              <li>                  <hr class="dropdown-divider">              </li>              <li><a class="dropdown-item" href="#">Sign out</a></li>          </ul>      </li>        <li>            <a href="#" class="nav-link text-truncate">                <i class="fs-5 bi-grid"></i><span class="ms-1 d-none d-sm-inline">🪄 Blog Mágico</span></a>        </li>        <li>            <a href="#" class="nav-link text-truncate">                <i class="fs-5 bi-people"></i><span class="ms-1 d-none d-sm-inline">🚂 Viaja a Hogwarts</span> </a>        </li>    </ul></div></div><div class="container-fluid"><div class="row">    <div class="col min-vh-100 py-3">        <!-- toggler -->        <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">            <i class="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>        </button>    </div></div>  </div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
+        var COMPONENT_TEMPLATE = '<div><div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">  <div class="offcanvas-header">    <h6 class="offcanvas-title d-none d-sm-block" id="offcanvas">Menu</h6>    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>  </div>  <div class="offcanvas-body px-0">    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start w-100" id="menu">              <li class="nav-item">        <a class="nav-link text-truncate" [routerLink]="[\'/loggin\']" routerLinkActive="active" data-bs-dismiss="offcanvas">          <i class="fs-5 bi-house"></i>           <span class="ms-1 d-none d-sm-inline">👤 Iniciar Sesión</span>        </a>      </li>      <li class="dropdown">        <a class="nav-link dropdown-toggle text-truncate" id="dropdown" data-bs-toggle="dropdown" aria-expanded="false">          <i class="fs-5 bi-bootstrap"></i>          <span class="ms-1 d-none d-sm-inline">🔍 Wiki</span>        </a>        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdown">          <li><a class="dropdown-item" [routerLink]="[\'/\']" data-bs-dismiss="offcanvas">Personajes</a></li>          <li><a class="dropdown-item" [routerLink]="[\'/wiki/movies\']" data-bs-dismiss="offcanvas">Películas</a></li>          <li><a class="dropdown-item" [routerLink]="[\'/wiki/book\']" data-bs-dismiss="offcanvas">Libros</a></li>          <li><a class="dropdown-item" [routerLink]="[\'/wiki/potions\']" data-bs-dismiss="offcanvas">Pociones</a></li>          <li><a class="dropdown-item" [routerLink]="[\'/wiki/spells\']" data-bs-dismiss="offcanvas">Hechizos</a></li>        </ul>      </li>      <li>        <a class="nav-link text-truncate" [routerLink]="[\'/list/pedidos\']" routerLinkActive="active" data-bs-dismiss="offcanvas">          <i class="fs-5 bi-people"></i>          <span class="ms-1 d-none d-sm-inline">🚂 Tus Pedidos</span>        </a>      </li>    </ul>  </div></div><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardListBookComponent', 'selector': 'app-card-list-book'},{'name': 'CardListComponent', 'selector': 'app-card-list'},{'name': 'CardListMoviesComponent', 'selector': 'app-card-list-movies'},{'name': 'CardListPotionsComponent', 'selector': 'app-card-list-potions'},{'name': 'CardListSpellsComponent', 'selector': 'app-card-list-spells'},{'name': 'FooterComponent', 'selector': 'app-footer'},{'name': 'FormLogginComponent', 'selector': 'app-form-loggin'},{'name': 'FormPedidoComponent', 'selector': 'app-form-pedido'},{'name': 'FormRegisterComponent', 'selector': 'app-form-register'},{'name': 'ListPedidoComponent', 'selector': 'app-list-pedido'},{'name': 'NavbarComponent', 'selector': 'app-navbar'},{'name': 'PagesWikiBookComponent', 'selector': 'app-pages-wiki-book'},{'name': 'PagesWikiComponent', 'selector': 'app-pages-wiki'},{'name': 'SidebarCarritoComponent', 'selector': 'app-sidebar-carrito'},{'name': 'SidebarMenuComponent', 'selector': 'app-sidebar-menu'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'SidebarMenuComponent'};
 </script>

@@ -9,7 +9,7 @@
     "test": "ng test",
     "serve:ssr:PotterStorreTest": "node dist/potter-storre-test/server/server.mjs",
     "compodoc": "npx compodoc -p tsconfig.app.json",
-     "compodoc:serve": "npx compodoc -s"
+    "compodoc:serve": "npx compodoc -s"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +26,7 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "express": "^4.18.2",
+    "ngx-toastr": "^19.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"

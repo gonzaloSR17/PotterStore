@@ -7,3 +7,41 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
+
+    /* Animación del texto */
+.letra1 {
+  font-size: 6vw;
+  opacity: 0;
+  animation: mostrarTexto 3s ease-in-out forwards;
+}
+
+@keyframes mostrarTexto {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+
+/* Contenedor general */
+.wikiPortada {
+  margin: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Caja de búsqueda */
+input {
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #ffa600;
+}
+
+/* Botón lupa */
+.lupa {
+  margin-left: 2px;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #ffa600;
+}

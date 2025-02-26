@@ -1,15 +1,15 @@
 <app-navbar></app-navbar>
 <div class="page-container">
-  <div class="main-container">
+  <div class="main-container magic-form">
 
     <!-- Le asignamos el grupo formgroup configurado en el typescript-->
-    <form [formGroup]="formUser" class="form-container">
+    <form (ngSubmit)="register()" [formGroup]="formUser" class="form-container">
       <div class="mb-3">
-        <label for="email" class="form-label">Introduce tu Gmail</label>
-        <input type="text" formControlName="gmail"  class="form-control">
+        <label for="email" class="form-label magic-form">Introduce tu Gmail</label>
+        <input type="text" id="datoGmail" [(ngModel)]="usuActual.gmail" formControlName="gmail"  class="form-control magic-form">
 
         <!-- El hidden funciona como un if, el valid hara que no salte la alarma, lo mismo pristine, ya que este devuelve true si esta vacio (sale la alarama si es false)-->
-        <div class="alert alert-danger" [hidden]="formUser.get('gmail')?.valid || formUser.get('gmail')?.pristine">
+        <div class="alert alert-danger magic-form" [hidden]="formUser.get('gmail')?.valid || formUser.get('gmail')?.pristine">
             <!-- hacemos 2 span-->
              <!-- Vas a verificar una array, pero luego de verificar ese array-->
               <!-- me buscara un indice con el nombre (required o email)-->
@@ -19,51 +19,52 @@
        </div>
 
 
-        <div id="emailHelp" class="form-text">Nosotros no compartiremos tu Gmail con nadie.</div>
+        <div id="emailHelp" class="form-text magic-form">Nosotros no compartiremos tu Gmail con nadie.</div>
       </div>
 
       <!-- Nombre de Usuario-->
       <div class="mb-3">
-        <label for="username" class="form-label">Introduce tu Usuario</label>
-        <input type="text" formControlName="nombreUsu" class="form-control">
+        <label for="username" class="form-label magic-form">Introduce tu Usuario</label>
+        <input [(ngModel)]="usuActual.usuario" id="datoUsuario"  type="text" formControlName="nombreUsu" class="form-control magic-form">
 
         <!-- El hidden funciona como un if, el valid hara que no salte la alarma, lo mismo pristine, ya que este devuelve true si esta vacio (sale la alarama si es false)-->
-        <div class="alert alert-danger" [hidden]="formUser.get('nombreUsu')?.valid || formUser.get('nombreUsu')?.pristine">
+        <div class="alert alert-danger magic-form" [hidden]="formUser.get('nombreUsu')?.valid || formUser.get('nombreUsu')?.pristine">
              El nombre De usuario es obligatiorio
         </div>
       </div>
       <div class="mb-3">
         <label for="firstname" class="form-label">Introduce tu Nombre Real</label>
-        <input type="text" formControlName="nombreReal" class="form-control" [(ngModel)]="usuActual.nombreReal">
-        <div class="alert alert-danger" [hidden]="formUser.get('nombreReal')?.valid || formUser.get('nombreReal')?.pristine">
+        <input [(ngModel)]="usuActual.nombreReal" id="datoNombreReal" type="text" formControlName="nombreReal" class="form-control magic-form" [(ngModel)]="usuActual.nombreReal">
+        <div class="alert alert-danger magic-form" [hidden]="formUser.get('nombreReal')?.valid || formUser.get('nombreReal')?.pristine">
           El nombre real es obligatorio 
         </div>
       </div>
       <div class="mb-3">
-        <label for="lastname" class="form-label">Introduce tu Apellido Real</label>
-        <input type="text"  formControlName="apellidoReal" name="lastname" class="form-control">
-        <div class="alert alert-danger" [hidden]="formUser.get('apellidoReal')?.valid || formUser.get('apellidoReal')?.pristine">
+        <label for="lastname" class="form-label magic-form">Introduce tu Apellido Real</label>
+        <input [(ngModel)]="usuActual.apellidoReal" type="text" id="datoApellido"  formControlName="apellidoReal" name="lastname" class="form-control magic-form">
+        <div class="alert alert-danger magic-form" [hidden]="formUser.get('apellidoReal')?.valid || formUser.get('apellidoReal')?.pristine">
           El apellido es obligatorio
         </div>
       </div>
       <div class="mb-3">
-        <label for="password" class="form-label">Contraseña</label>
-        <input type="password" formControlName="contrasenia" name="contrasenia" class="form-control">
-        <div class="alert alert-danger" [hidden]="formUser.get('contrasenia')?.valid || formUser.get('contrasenia')?.pristine">
+        <label for="password" class="form-label magic-form">Contraseña</label>
+        <input [(ngModel)]="usuActual.contrasenia" id="datoContrasenia" type="password" formControlName="contrasenia" name="contrasenia" class="form-control magic-form">
+        <div class="alert alert-danger magic-form magic-form" [hidden]="formUser.get('contrasenia')?.valid || formUser.get('contrasenia')?.pristine">
           La contraseña necesita de minimo 3 caracteres
         </div>
       </div>
       <div class="mb-3">
-        <label for="confirm-password" class="form-label">Confirmar Contraseña</label>
-        <input type="password"  formControlName="confcontrasenia" name="confirmPassword" class="form-control">
-        <div class="alert alert-danger" [hidden]="formUser.get('confcontrasenia')?.valid || formUser.get('confcontrasenia')?.pristine">
+        <label for="confirm-password" class="form-label magic-form">Confirmar Contraseña</label>
+        <input type="password" [(ngModel)]="usuActual.confcontrasenia" formControlName="confcontrasenia" name="confirmPassword" class="form-control magic-form">
+        <div class="alert alert-danger magic-form" [hidden]="formUser.get('confcontrasenia')?.valid || formUser.get('confcontrasenia')?.pristine">
           La contraseña necesita minimo de 3 caracteres
         </div>
       </div>
 
       <!-- con disabled recogemos si (if) el formUser es invalido me bloque este boton-->
-      <button type="submit" class="btn btn-primary" [disabled]="formUser.invalid">Registrarme</button>
+      <button type="submit" class="btn btn-primary magic-form" [disabled]="formUser.invalid">Registrarme</button>
     </form>
+    <p>{{mensaje}}</p>
   </div>
 </div>
 

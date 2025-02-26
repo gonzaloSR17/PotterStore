@@ -1,0 +1,18 @@
+.footer {
+    background-color: #cbd5c0; /* Verde claro */
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+  }
+  
+  .social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .social-links a:hover {
+    color: gray;
+  }
+  

@@ -1,0 +1,131 @@
+<div class="pedido-container">
+    <h2>Formulario de Pedido</h2>
+  
+    <form (ngSubmit)="onSubmit()" [formGroup]="pedidoForm" class="pedido-form">
+      <div class="form-group">
+        <div class="form-item">
+          <label>Nombre Completo:</label>
+          <input type="text" formControlName="nombre" placeholder="Ingrese su nombre">
+          <div class="error" *ngIf="pedidoForm.get('nombre')?.invalid && pedidoForm.get('nombre')?.touched">
+            Nombre requerido (mínimo 3 caracteres).
+          </div>
+        </div>
+  
+        <div class="form-item">
+          <label>Email:</label>
+          <input type="email" formControlName="email" placeholder="Ingrese su email">
+          <div class="error" *ngIf="pedidoForm.get('email')?.invalid && pedidoForm.get('email')?.touched">
+            Ingrese un email válido.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <div class="form-item">
+          <label>Teléfono:</label>
+          <input type="text" formControlName="telefono" placeholder="Ingrese su número de teléfono">
+          <div class="error" *ngIf="pedidoForm.get('telefono')?.invalid && pedidoForm.get('telefono')?.touched">
+            Ingrese un número de teléfono válido (9-12 dígitos).
+          </div>
+        </div>
+  
+        <div class="form-item">
+          <label>Dirección:</label>
+          <input type="text" formControlName="direccion" placeholder="Ingrese su dirección">
+          <div class="error" *ngIf="pedidoForm.get('direccion')?.invalid && pedidoForm.get('direccion')?.touched">
+            Dirección requerida.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <div class="form-item">
+          <label>Ciudad:</label>
+          <input type="text" formControlName="ciudad" placeholder="Ingrese su ciudad">
+          <div class="error" *ngIf="pedidoForm.get('ciudad')?.invalid && pedidoForm.get('ciudad')?.touched">
+            Ciudad requerida.
+          </div>
+        </div>
+  
+        <div class="form-item">
+          <label>Código Postal:</label>
+          <input type="text" formControlName="codigoPostal" placeholder="Ingrese su código postal">
+          <div class="error" *ngIf="pedidoForm.get('codigoPostal')?.invalid && pedidoForm.get('codigoPostal')?.touched">
+            Código postal debe contener 5 números.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <div class="form-item">
+          <label>Método de Pago:</label>
+          <select formControlName="metodoPago">
+            <option value="Tarjeta">Tarjeta de Crédito</option>
+            <option value="Paypal">PayPal</option>
+            <option value="Transferencia">Transferencia Bancaria</option>
+          </select>
+        </div>
+  
+        <div class="form-item">
+          <label>Número de Tarjeta:</label>
+          <input type="text" formControlName="tarjeta" placeholder="Ingrese su número de tarjeta">
+          <div class="error" *ngIf="pedidoForm.get('tarjeta')?.invalid && pedidoForm.get('tarjeta')?.touched">
+            Ingrese un número de tarjeta válido.
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-item full-width">
+        <label>Notas Adicionales:</label>
+        <textarea formControlName="notas" placeholder="Opcional"></textarea>
+      </div>
+  
+      <button type="submit" [disabled]="pedidoForm.invalid">Realizar Pedido</button>
+    </form>
+  
+    <p class="success-message" *ngIf="mensajeExito">{{ mensajeExito }}</p>
+  </div>
+  
+  <style>
+  .pedido-container {
+    max-width: 900px;
+    width: 90%;
+    margin: 100px auto 0; /* Agrega margen superior para separar del navbar */
+    padding-top: 20px; /* Espacio extra */
+  }
+  
+  .pedido-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .form-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  button {
+    margin-top: 15px;
+  }
+  
+  @media (max-width: 768px) {
+    .form-group {
+      flex-direction: column;
+    }
+  }
+  </style>
+
+  

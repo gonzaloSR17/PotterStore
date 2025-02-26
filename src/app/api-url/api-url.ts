@@ -5,7 +5,7 @@ export const apiUrl = {
     
     apiCharacter: "/personajes",
 
-    apiHechizos: "https://api.potterdb.com/v1/spells",
+    apiHechizos: "https://api.potterdb.com/v1/spells?page[size]=12&page[number]=",
     apiHechizosDetails: "https://api.potterdb.com/v1/spells?page[number]=",
 
     apiPociones: "https://api.potterdb.com/v1/potions?page[size]=12&page[number]=",

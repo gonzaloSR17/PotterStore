@@ -1,9 +1,40 @@
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title" id="offcanvasRightLabel">🧹 Cesta Mágica</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">🛍️ Cesta Mágica</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body">
+    <!-- Carrito vacío -->
+    <div *ngIf="bookList.length === 0 && movieList.length === 0" class="text-center">
+      <p>Tu carrito está vacío</p>
     </div>
-    <div class="offcanvas-body">
-      ...
+
+    <!-- Libros en el carrito -->
+    <div *ngFor="let book of bookList" class="cart-item">
+      <img [src]="book.imagenUrl || 'default-image.jpg'" alt="{{ book.title }}" class="book-image">
+      <div class="book-info">
+        <h6>{{ book.title }}</h6>
+        <p>Precio: ${{ book.price }}</p>
+        <button class="btn btn-danger btn-sm" (click)="eliminarLibro(book)">Eliminar</button>
+      </div>
+    </div>
+
+    <!-- Películas en el carrito -->
+    <div *ngFor="let movie of movieList" class="cart-item">
+      <img [src]="movie.poster || 'default-image.jpg'" alt="{{ movie.title }}" class="movie-image">
+      <div class="movie-info">
+        <h6>{{ movie.title }}</h6>
+        <p>Precio: ${{ movie.price }}</p>
+        <button class="btn btn-danger btn-sm" (click)="eliminarPelicula(movie)">Eliminar</button>
+      </div>
+    </div>
+
+    <!-- Total y botón de pedido -->
+    <div *ngIf="bookList.length > 0 || movieList.length > 0" class="cart-footer">
+      <h5>Total: ${{ totalCarrito }}</h5>
+      <button class="btn btn-warning w-100 mt-3" (click)="vaciarCarrito()">Vaciar Carrito</button>
+      <button class="btn btn-success w-100 mt-2" [routerLink]="['/pedido']">Realizar Pedido</button>
     </div>
   </div>
+</div>

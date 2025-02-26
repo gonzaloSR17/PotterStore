@@ -1,0 +1,51 @@
+/* Centrado y estilo del contenedor */
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("/assets/loggin.gif");
+    background-size: cover; /* Hace que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    padding-top: 50px; /* Para evitar el navbar */
+}
+
+/* Estilo del formulario */
+.main-container {
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Título grande */
+.title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.btn-success{
+margin-left: 127px;
+}
+
+/* Animación del formulario */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

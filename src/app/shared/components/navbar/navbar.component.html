@@ -1,59 +1,85 @@
 <div class="pos-f-t">
-    <div class="collapse" id="navbarToggleExternalContent">
-      <div class="bg-custom p-4">
-        <h4 class="text-white">Collapsed content</h4>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
-      </div>
-    </div>
-    <!-- Este es boton que deseo que abra el sidebars y no consigo-->
-    <nav class="navbar navbar-dark bg-custom fixed-top">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+  <nav class="navbar navbar-dark bg-custom fixed-top d-flex justify-content-between align-items-center px-2">
+    <!-- Botón del Sidebar -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Aquí se coloca el texto centrado -->
-    <div class="navbar-text-center">
+    <!-- Logo Centrado (se oculta en móviles para más espacio) -->
+    <div class="navbar-text-center d-none d-md-block">
       <img src="../assets/logo.png" width="50" height="50"> 
-      </div>
-
-    <!-- Aqui configuro el boton de la cesta que ira al otro lado-->
-
-    <div class="navbar-button-left">
-        <button class="navbar-button-left-enter" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-            <!-- Para poner un icono-->
-            <span class="navbar-toggler-icon">🛒</span>
-        </button>
     </div>
 
-    </nav>
-  </div>
+    <!-- Usuario + Imagen + Botón de Compra -->
+    <div class="navbar-user-container d-flex align-items-center">
+      <div *ngIf="usuarioActual" class="user-info d-flex align-items-center">
+        <img src="{{  '../assets/pfp.jpg' }}" class="profile-img" alt="Foto de perfil">
+        <span class="user-email d-none d-sm-inline">{{ usuarioActual.gmail }}</span>
+      </div>
 
+      <!-- Botón de la Cesta -->
+      <button class="navbar-button-left-enter" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <span class="navbar-toggler-icon">🛒</span>
+      </button>
+    </div>
+  </nav>
+</div>
 
-  
-  <style>
-    /* Personalización del navbar */
-    .bg-custom {
-      background-color: #a6b36b; /* Ajusta este color al tono verde oscuro que prefieras */
-    }
-    .navbar-toggler {
-      border-color: rgba(255, 255, 255, 0.5); /* Ajusta si quieres más contraste */
-    }
-    .navbar-toggler-icon {
-    /*  background-color: white; /* Cambia el color del ícono de hamburguesa */
-    }
+<style>
+/* Personalización del navbar */
+.bg-custom {
+  background-color: #a6b36b; /* Ajusta este color al tono verde oscuro */
+}
 
-    /* Contenedor para el texto centrado */
-  .navbar-text-center {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Centrar logo solo en pantallas grandes */
+.navbar-text-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Contenedor del usuario y botón */
+.navbar-user-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Espaciado entre elementos */
+}
+
+/* Imagen de perfil circular */
+.profile-img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+/* Estilo del correo del usuario */
+.user-email {
+  color: white;
+  font-size: 0.9rem; /* Tamaño más pequeño en móvil */
+  max-width: 120px; /* Para evitar desbordamientos */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 576px) {
+  .navbar {
+    padding: 0.5rem; /* Reducir espacio en móviles */
   }
-
-  /* Estilo del texto centrado */
-  .navbar-text {
-    color: white; /* Ajusta el color del texto */
-    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+  .profile-img {
+    width: 30px;
+    height: 30px;
   }
-
-  </style>
-  
+  .user-email {
+    font-size: 0.8rem;
+    max-width: 100px;
+  }
+}
+</style>

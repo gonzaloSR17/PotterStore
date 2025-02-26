@@ -1,0 +1,9 @@
+.offcanvas {
+    width: 250px !important; /* Ajusta el ancho */
+}
+
+@media (max-width: 576px) {
+    .offcanvas-body .nav-link span {
+        display: inline !important;
+    }
+}

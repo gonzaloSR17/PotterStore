@@ -1,12 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { movie } from '../../interfaces/harrypotter/movies.interface';
 import { HarryPotterServices } from '../../services/harrypotterServices/harrypotter.services';
+import { CartService } from '../../services/cart/cart-service.service';
+import { pelicula } from '../../interfaces/usuario/pelicula.interface';
 
-/**
- * Componente que muestra una lista de películas de Harry Potter.
- * 
- * @author Gonzalo Sanchez-Ros Paz
- */
 @Component({
   selector: 'app-card-list-movies',
   standalone: false,
@@ -14,30 +11,18 @@ import { HarryPotterServices } from '../../services/harrypotterServices/harrypot
   styleUrl: './card-list-movies.component.css'
 })
 export class CardListMoviesComponent {
-
-  /**
-   * Array que almacena las películas obtenidas del servicio.
-   */
+  
   @Input()
   public resMovies: movie[] = [];
 
-  /**
-   * Constructor del componente que inyecta el servicio de Harry Potter.
-   * 
-   * @param hpServices Servicio que obtiene las películas de Harry Potter.
-   */
-  constructor(private hpServices: HarryPotterServices) {}
+  public peliculaSeleccionada: movie | null = null;
 
-  /**
-   * Método que se ejecuta al inicializar el componente.
-   */
+  constructor(private hpServices: HarryPotterServices, private cartService: CartService) {}
+
   ngOnInit(): void {
     this.imprimirPeliculasHp();
   }
 
-  /**
-   * Obtiene la lista de películas desde el servicio y la almacena en resMovies.
-   */
   imprimirPeliculasHp(): void {
     this.hpServices.fetchMovies().subscribe(
       (movie) => {
@@ -45,5 +30,21 @@ export class CardListMoviesComponent {
         console.log('Resultados encontrados:', this.resMovies);
       }
     );
+  }
+
+  detallesPelicula(pelicula: movie): void {
+    this.peliculaSeleccionada = pelicula;
+  }
+
+  agregarPeliculaACesta(peliculaHP: movie): void {
+    const peliAgrega: pelicula = {
+      price: 20, // Precio fijo (puedes modificarlo dinámicamente si es necesario)
+      serial: peliculaHP.serial,
+      title: peliculaHP.title,
+      poster: peliculaHP.poster
+    };
+
+    this.cartService.agregarPelicula(peliAgrega);
+    alert(`${peliculaHP.title} ha sido añadida al carrito.`);
   }
 }

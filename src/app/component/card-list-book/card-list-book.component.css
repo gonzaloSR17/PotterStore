@@ -1,0 +1,49 @@
+/* Aumentar tamaño sin necesidad de zoom manual */
+.book-card {
+  width: 220px; /* Ajuste para que se vea grande sin zoom */
+  margin: auto;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+}
+
+/* Imagen ajustada */
+.book-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+/* Animación hover */
+.book-card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Ajustes en el contenido */
+.card-body {
+  font-size: 13px;
+  padding: 12px;
+  text-align: center;
+}
+
+/* Botón */
+.btn-sm {
+  font-size: 13px;
+  padding: 6px 12px;
+}
+
+/* Contenedor */
+.container {
+  max-width: 95%;
+}
+
+/* Asegurar que las tarjetas mantengan buena distribución */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -137,21 +137,27 @@ import { CardListBookComponent } from &#x27;./component/card-list-book/card-list
 import { CardListPotionsComponent } from &#x27;./component/card-list-potions/card-list-potions.component&#x27;;
 import { CardListSpellsComponent } from &#x27;./component/card-list-spells/card-list-spells.component&#x27;;
 import { FormRegisterComponent } from &#x27;./component/form-register/form-register.component&#x27;;
+import { FormLogginComponent } from &#x27;./component/form-loggin/form-loggin.component&#x27;;
+import { FormPedidoComponent } from &#x27;./component/form-pedido/form-pedido/form-pedido.component&#x27;;
+import { ListPedidoComponent } from &#x27;./component/list-pedido/list-pedido/list-pedido.component&#x27;;
 
 // Declaracion rutas
 
 const routes: Routes &#x3D; [
 
   { path: &#x27;&#x27;,component: CardListComponent, pathMatch: &#x27;full&#x27;},
+  { path: &#x27;loggin&#x27;, component: FormLogginComponent},
   { path: &#x27;register&#x27;, component: FormRegisterComponent},
   { path: &#x27;wiki/movies&#x27;, component: CardListMoviesComponent},
   { path: &#x27;wiki/book&#x27;, component: CardListBookComponent},
   { path: &#x27;wiki/potions&#x27;, component: CardListPotionsComponent},
-  { path: &#x27;wiki/spells&#x27;, component: CardListSpellsComponent}
+  { path: &#x27;wiki/spells&#x27;, component: CardListSpellsComponent},
+  { path: &#x27;pedido&#x27;, component: FormPedidoComponent},
+  { path: &#x27;list/pedidos&#x27;, component: ListPedidoComponent}
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { scrollPositionRestoration: &#x27;enabled&#x27; })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

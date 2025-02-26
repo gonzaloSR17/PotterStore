@@ -1,5 +1,16 @@
-<app-navbar></app-navbar>  
+
 <app-pages-wiki></app-pages-wiki> 
+
+<div class="wikiPortada">
+  <p class="letra1">Disfruta del mundo mágico</p>
+</div>
+
+<div class="wikiPortada">
+  <input #nombreBusquedaPersonaje type="text" class="cajaBusqueda" placeholder="Buscar...">
+  <p></p>
+  <button (click)="imprimirPersonajesDeseados(nombreBusquedaPersonaje.value)" class="lupa">🔍</button>
+</div>
+
 <!--Aqui se imprimiran los resultados-->
 <!--Se usara con un for-->
 
@@ -7,7 +18,7 @@
  
 <div class="container mt-4">
   <div class="row g-4">
-    <div class="col-md-3" *ngFor="let Character of resCharacter" [ngClass]="{'col-md-12': resCharacter.length === 1, 'col-md-3 col-sm-6': resCharacter.length > 1}">
+    <div class="ol-md-2 col-sm-4" *ngFor="let Character of resCharacter" [ngClass]="{'col-md-6 col-lg-4': resCharacter.length === 1, 'col-md-3 col-sm-6': resCharacter.length > 1}">
       <div class="card card-hover h-100" style="width: 100%;">
         <img [src]="Character.imagen" class="card-img-top img-fluid">
         <div class="card-body">
@@ -25,114 +36,5 @@
 </div>
 
 
-
-<!--Para imprimir libros--> 
-
-<div class="card mb-3" style="max-width: 540px;">
-  <div *ngFor="let Libros of resBook" class="row no-gutters">
-    <div class="col-md-4">
-      <img [src]="Libros.cover" class="card-img" alt="...">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">{{Libros.title}}</h5>
-        <p class="card-text">{{Libros.summary}}</p>
-        <p class="card-text"> <small class="text-muted">Numbers Pages: {{Libros.pages}} - {{Libros.author}} - {{Libros.release_date}} </small></p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Apartado html para imprimir las peliculas-->
-
-<div class="container mt-4">
-  <div class="row g-4">
-    <div class="col-md-4" *ngFor="let pelicula of resMovies">
-      <div class="card card-hover h-100" style="width: 100%;">
-        <img [src]="pelicula.poster" class="card-img-top img-fluid" alt="Poster de {{ pelicula.title }}">
-        <div class="card-body">
-          <h5 class="card-title">{{ pelicula.title }}</h5>
-          <p class="card-text">{{ pelicula.summary }}</p>
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Release Date: {{ pelicula.release_date | date }}</li>
-          <li class="list-group-item">Rating: {{ pelicula.rating }}</li>
-          <li class="list-group-item">Running Time: {{ pelicula.running_time }}</li>
-        </ul>
-        <div class="card-body">
-          <a [href]="pelicula.wiki" target="_blank" class="card-link">More Info</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Parte para imprimir los hechizos -->
-
-<div class="container mt-4">
-  <div class="row g-4">
-    <div class="col-md-4" *ngFor="let spell of spells">
-      <div class="card card-hover h-100" style="width: 100%;">
-        <img [src]="spell.attributes.image" class="card-img-top img-fluid" (error)="setDefaultImage($event)">
-        <div class="card-body">
-          <h5 class="card-title">{{ spell.attributes.name }}</h5>
-          <p class="card-text">{{ spell.attributes.effect }}</p>
-          <p class="card-text">{{ spell.attributes.slug }}</p>
-          <p class="card-text">{{ spell.attributes.incantation }}</p>
-
-        </div>
-        <ul class="list-group list-group-flush">
-          <li class="list-group-item">Light: {{ spell.attributes.light }}</li>
-          <li class="list-group-item">hand: {{ spell.attributes.hand }}</li>
-          <li class="list-group-item">Creator: {{ spell.attributes.creator }}</li>
-        </ul>
-        <div class="card-body">
-          <a [href]="" target="_blank" class="card-link">More Info</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Parte para imprimir las pociones-->
-
-  <div class="container mt-4" #potionContainer>
-    <div class="row g-4">
-      <div class="col-md-4" *ngFor="let potion of potions">
-        <div class="card card-hover h-100" style="width: 100%;">
-          <img [src]="potion.attributes.image" class="card-img-top img-fluid" (error)="setDefaultImage($event)">
-          <div class="card-body">
-            <h5 class="card-title">{{ potion.attributes.name }}</h5>
-            <p class="card-text">{{ potion.attributes.effect }}</p>
-            <p class="card-text">{{ potion.attributes.slug }}</p>
-            <p class="card-text">{{ potion.attributes.time }}</p>
-
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">difficulty: {{ potion.attributes.difficulty }}</li>
-            <li class="list-group-item">ingredients: {{ potion.attributes.ingredients }}</li>
-            <li class="list-group-item">Creator: {{ potion.attributes.inventors }}</li>
-          </ul>
-          <div class="card-body">
-            <a [href]="" target="_blank" class="card-link">More Info</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="d-flex justify-content-center">
-      <button type="button" class="btn btn-danger" *ngIf="mostrarBotonMasPociones" (click)="imprimirPociones()">Mostrar mas Pociones ⚗️</button>
-      <button type="button" class="btn btn-danger" *ngIf="mostrarBotonMenosPociones" (click)="imprimirPociones()">Mostrar las anteriores Pociones ⚗️</button>
-    </div>
-    
-    <!-- Poner el boton en el centro-->
-  <div class="d-flex justify-content-center">
-    <button type="button" class="btn btn-danger" *ngIf="mostrarBoton" (click)="imprimirMasSpells()">Más Detalles</button>
-  </div>
-</div>
-
-
-
-<app-sidebar-menu></app-sidebar-menu>
-<app-sidebar-carrito></app-sidebar-carrito>
 
 

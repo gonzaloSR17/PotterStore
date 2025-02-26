@@ -26,11 +26,20 @@ export class HarryPotterServices {
   /** Endpoint de detalles de hechizos */
   URLSpellsMors = apiUrl.apiHechizosDetails;
 
+  /**Endpoint paraa buscar pociones especificas */
+  URLPotionsSearch = 'https://api.potterdb.com/v1/potions?filter[name_cont]='
+
+  /**Endpoint para buscar hechizos especificos */
+  URLSpeelsSearch = 'https://api.potterdb.com/v1/spells?filter[name_cont]='
+
   /** Contador para manejar paginación de hechizos */
   contador: number = 1;
 
   /** Contador para manejar paginación de pociones */
   contadorPociones: number = 1;
+
+  /** Contador para manejar paginación de pociones */
+  contadorHechizos: number = 1;
 
   /**
    * Almacena la lista de personajes obtenidos desde la API.
@@ -42,6 +51,8 @@ export class HarryPotterServices {
    * @param http Servicio HttpClient para realizar peticiones HTTP.
    */
   constructor(private http: HttpClient) { }
+
+  
 
   /**
    * Obtiene la lista de personajes desde la API.
@@ -72,7 +83,7 @@ export class HarryPotterServices {
    * @returns Un Observable con los datos de los hechizos.
    */
   fetchSpells(): Observable<Spells> {
-    return this.http.get<Spells>(`${apiUrl.apiHechizos}`);
+    return this.http.get<Spells>(`${apiUrl.apiHechizos}${this.contadorHechizos}`);
   }
 
   /**
@@ -121,4 +132,29 @@ export class HarryPotterServices {
       map((potion: PotionResponse) => potion.data)
     );
   }
+
+  searchPotions(palabraBusqueda: string): Observable<PotionResponse> {
+    return this.http.get<PotionResponse>(`${this.URLPotionsSearch}${palabraBusqueda}`);
+  }
+
+  
+
+  searchPotionsData(palabraBusqueda: string): Observable<Potion[]> {
+    return this.searchPotions(palabraBusqueda).pipe(
+      map((potion: PotionResponse) => potion.data)
+    );
+  }
+
+  searchSpeells(palabraBusqueda: string): Observable<Spells> {
+    return this.http.get<Spells>(`${this.URLSpeelsSearch}${palabraBusqueda}`);
+  }
+
+  searchSpeelsData(palabraBusqueda: string): Observable<Datum[]> {
+    return this.searchSpeells(palabraBusqueda).pipe(
+      map((spells: Spells) => spells.data)
+    );
+  }
+
+
+
 }

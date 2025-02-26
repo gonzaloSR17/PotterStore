@@ -1,15 +1,74 @@
 .page-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Altura completa de la pantalla */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Altura completa de la pantalla */
+  background-image: url("/assets/register.gif"); /* Asegúrate de que la ruta sea correcta */
+  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que el GIF se repita */
+}
 
-  .main-container {
-    width: 100%;
-    max-width: 500px; /* Ancho máximo del formulario */
-    background-color: #f8f9fa; /* Color de fondo suave */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.main-container {
+  width: 100%;
+  max-width: 400px; /* Reduce el ancho */
+  background-color: rgba(0, 0, 0, 0.2); /* Más transparencia */
+  padding: 15px; /* Menos padding para hacerlo más compacto */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(6px); /* Menos blur para ver más el fondo */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 55px;
+}
+
+.form-control {
+  height: 35px; /* Reduce la altura */
+  font-size: 14px; /* Letra más pequeña */
+  padding: 4px;
+}
+
+.mb-3 {
+  margin-bottom: 10px; /* Reduce la separación entre inputs */
+}
+
+.main-container {
+  color: white; /* Hace que todo el texto dentro del formulario sea blanco */
+}
+
+.form-label,
+.form-text,
+.alert {
+  color: white !important; /* Fuerza el color blanco en etiquetas y mensajes */
+}
+
+.alert-danger {
+  background-color: rgba(255, 0, 0, 0.3); /* Hace que los errores sean más translúcidos */
+  color: white; /* Texto de error en blanco */
+}
+
+@keyframes magicAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(0deg);
   }
+  50% {
+    opacity: 1;
+    transform: scale(1.2) rotate(10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.magic-form {
+  animation: magicAppear 1.5s ease-in-out;
+}
+
+@keyframes magicShadow {
+ 
+}
+
+.magic-form {
+  animation: magicAppear 1.5s ease-in-out, magicShadow 3s infinite;
+}

@@ -16,6 +16,19 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormRegisterComponent } from './component/form-register/form-register.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { FormLogginComponent } from './component/form-loggin/form-loggin.component';
+
+//animaciones del toast
+
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+
+import { UserServiceService } from './services/user-service.service';
+import { AuthService } from './services/auth.service';
+import { FormPedidoComponent } from './component/form-pedido/form-pedido/form-pedido.component';
+import { ListPedidoComponent } from './component/list-pedido/list-pedido/list-pedido.component';
+
 
 
 @NgModule({
@@ -28,7 +41,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardListMoviesComponent,
     CardListPotionsComponent,
     CardListSpellsComponent,
-    FormRegisterComponent
+    FormRegisterComponent,
+    FormLogginComponent,
+    FormPedidoComponent,
+    ListPedidoComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -36,11 +53,25 @@ import { ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     RouterModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+      timeOut: 3000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true,
+      progressBar: true,
+      easeTime: 500,  // Duración de la animación
+      newestOnTop: true, 
+      closeButton: true
+    })
   ],
   providers: [
+
     provideHttpClient(),  // Reemplaza HttpClientModule por esto
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    AuthService,
+    UserServiceService
   ],
   bootstrap: [AppComponent]
 })
