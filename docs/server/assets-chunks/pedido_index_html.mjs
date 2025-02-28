@@ -14,5 +14,5 @@ export default `<!DOCTYPE html><html lang="en" data-beasties-container><head>
 
   <!-- Bootstrap JavaScript desde un CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-FLLYT6X7.js" defer></script><script src="main-PFEABF3V.js" type="module"></script>
-<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"7":"t0"},"c":{"7":[]}},{"t":{"9":"t9","14":"t10","20":"t11","25":"t12","31":"t13","36":"t14","52":"t15","59":"t16"},"c":{"9":[],"14":[],"20":[],"25":[],"31":[],"36":[],"52":[],"59":[]}},{},{"t":{"6":"t3","7":"t4","8":"t5","9":"t6"},"c":{"6":[{"i":"t3","r":1}],"7":[],"8":[],"9":[]}},{"c":{"1":[{"i":"c3805379210","r":1}]}}]}</script></body></html>`;
+<script src="polyfills-FFHMD2TL.js" type="module"></script><script src="scripts-FLLYT6X7.js" defer></script><script src="main-76O3WG7L.js" type="module"></script>
+<script id="ng-state" type="application/json">{"__nghData__":[{"t":{"7":"t0"},"c":{"7":[]}},{"t":{"9":"t6","14":"t7","20":"t8","25":"t9","31":"t10","36":"t11","52":"t12","59":"t13"},"c":{"9":[],"14":[],"20":[],"25":[],"31":[],"36":[],"52":[],"59":[]}},{},{"t":{"6":"t2","7":"t3","8":"t4","9":"t5"},"c":{"6":[{"i":"t2","r":1}],"7":[],"8":[],"9":[]}},{"c":{"1":[{"i":"c3805379210","r":1}]}}]}</script></body></html>`;

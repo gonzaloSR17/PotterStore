@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   height: 100vh; /* Altura completa de la pantalla */
-  background-image: url("/assets/register.gif"); /* Asegúrate de que la ruta sea correcta */
+  background-image: url(https://media4.giphy.com/media/26BRzozg4TCBXv6QU/giphy.gif?cid=11c09b9526bp2939kf6mw6ss69992mea5r8y1cpbqdtvsvyky&ep=v1_gifs_search&rid=giphy.gif&ct=g);
   background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
   background-position: center; /* Centra la imagen */
   background-repeat: no-repeat; /* Evita que el GIF se repita */
